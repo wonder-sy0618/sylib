@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	</head>
+	<body>
+		
+		<script src="../sylib.js" type="text/javascript" charset="utf-8"></script>
+		
+		<input type="text" id="base64_src" value="test string" />
+		<button type="button" id="base64_btn" >base64 encode</button>
+		<input type="text" id="base64_output" style="width:400px;" />
+		<br/><br/>
+		<script>
+			seajs.use(['jquery/jquery'], function($) {
+				$("#base64_btn").click(function() {
+					seajs.use(['syl/base64'], function(base64) {
+						var src = $("#base64_src").val();
+						var v = base64.encode(src);
+						$("#base64_output").val(v);
+					});
+				});
+			});
+		</script>
+		
+		<input type="text" id="base64d_src" value="" />
+		<button type="button" id="base64d_btn" >base64 decode</button>
+		<input type="text" id="base64d_output" style="width:400px;" />
+		<br/><br/>
+		<script>
+			seajs.use(['jquery/jquery'], function($) {
+				$("#base64d_btn").click(function() {
+					seajs.use(['syl/base64'], function(base64) {
+						var src = $("#base64d_src").val();
+						var v = base64.decode(src);
+						$("#base64d_output").val(v);
+					});
+				});
+			});
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	</head>
+	<body>
+		
+		<script src="../sylib.js" type="text/javascript" charset="utf-8"></script>
+		
+		
+		<input type="text" id="md5_src" value="test string" />
+		<button type="button" id="md5_btn" >to MD5</button>
+		<input type="text" id="md5_output" style="width:400px;" />
+		<br/><br/>
+		<script>
+			seajs.use(['jquery/jquery'], function($) {
+				$("#md5_btn").click(function() {
+					seajs.use(['gwjjeff/cryptojs'], function(cryptojs) {
+						var src = $("#md5_src").val();
+						var v = cryptojs.MD5(src);
+						$("#md5_output").val(v);
+					});
+				});
+			});
+		</script>
+		
+		
+		<input type="text" id="aes_src" value="test string" />
+		<input type="text" id="aes_privatekey" value="privatekey" />
+		<button type="button" id="aes_btn" >AES encrypt</button>
+		<input type="text" id="aes_output" style="width:400px;" />
+		<br/><br/>
+		<script>
+			seajs.use(['jquery/jquery'], function($) {
+				$("#aes_btn").click(function() {
+					seajs.use(['gwjjeff/cryptojs'], function(cryptojs) {
+						var src = $("#aes_src").val();
+						var privatekey = $("#aes_privatekey").val();
+						var v = cryptojs.AES.encrypt(src, privatekey);
+						$("#aes_output").val(v);
+					});
+				});
+			});
+		</script>
+		
+		
+		<input type="text" id="aesd_src" value="" />
+		<input type="text" id="aesd_privatekey" value="privatekey" />
+		<button type="button" id="aesd_btn" >AES decrypt</button>
+		<input type="text" id="aesd_output" style="width:30%;" />
+		<br/><br/>
+		<script>
+			seajs.use(['jquery/jquery'], function($) {
+				$("#aesd_btn").click(function() {
+					seajs.use(['gwjjeff/cryptojs'], function(cryptojs) {
+						var src = $("#aesd_src").val();
+						var privatekey = $("#aesd_privatekey").val();
+						try {
+							var v = cryptojs.AES.decrypt(src, privatekey);
+							if (!v || v.length <= 0) {
+								$("#aesd_output").val('<error>');
+							} else {
+								$("#aesd_output").val(v);
+							}
+						} catch (e) {
+							$("#aesd_output").val('<error>');
+							console.log(e);
+							throw e;
+						}
+					});
+				});
+			});
+		</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>
