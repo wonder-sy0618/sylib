@@ -91,8 +91,10 @@ seajs.config({
 		'moment/moment': 	'moment/moment/moment.js',
 		'syl/utils': 		'syl/utils/utils.js',
 		'syl/base64': 		'syl/base64/base64.js',
+		'syl/notify': 		'syl/notify/notify.js',
 		'baidu/ueditor': 	'baidu/ueditor/ueditor.js',
 		'bootstrap/bootstrap': 		'bootstrap/bootstrap/js/bootstrap.min.js',
+		'bootstrap/treeview': 		'bootstrap/treeview/bootstrap-treeview.min.js',
 		'douglascrockford/json': 	'douglascrockford/json/json.js',
 		'gwjjeff/cryptojs': 		'gwjjeff/cryptojs/cryptojs.js',
 		'apache/amq': 		'apache/amq/amq.js'

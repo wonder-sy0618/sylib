@@ -1,1 +1,1 @@
-["moment", "template", "json", "ueditor", "bootstrap", "artdialog", "base64", "cryptojs"]
+["moment", "template", "json", "ueditor", "bootstrap", "bootstrap-treeview", "artdialog", "base64", "notify", "cryptojs"]
