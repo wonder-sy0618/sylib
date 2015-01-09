@@ -48,7 +48,6 @@
 			var k=i, v = document.getElementsByTagName("script")[i];
 			if (!v || !v.attributes['src']) continue;
 			var src = v.attributes['src'].value;
-			console.log(src);
 			if (src && src.indexOf('sylib.js') != -1) {
 				if (src && (src.startWith("http://") || src.startWith("https://"))) {
 					cdnBasePath = src.substring(0, src.lastIndexOf('sylib.js'));;
