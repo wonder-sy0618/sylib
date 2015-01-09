@@ -48,12 +48,13 @@
 			var k=i, v = document.getElementsByTagName("script")[i];
 			if (!v || !v.attributes['src']) continue;
 			var src = v.attributes['src'].value;
-			if (src && src.indexOf('/sylib.js') != -1) {
+			console.log(src);
+			if (src && src.indexOf('sylib.js') != -1) {
 				if (src && (src.startWith("http://") || src.startWith("https://"))) {
-					cdnBasePath = src.substring(0, src.lastIndexOf('/sylib.js')+1);;
+					cdnBasePath = src.substring(0, src.lastIndexOf('sylib.js'));;
 				} else if (src && src.length > 0) {
 					var js = window.document.location.href.substring(0, window.document.location.href.lastIndexOf("/")+1) + src;
-					cdnBasePath = js.substring(0, js.lastIndexOf('/sylib.js')+1);
+					cdnBasePath = js.substring(0, js.lastIndexOf('sylib.js'));
 				} else {
 					cdnBasePath = undefined;
 				}
