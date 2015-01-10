@@ -84,8 +84,9 @@ var cdnbase = window.syl.utils.getCdnBasePath();
 seajs.config({
 	base : window.syl.utils.getPageBasePath(),
 	alias: {
-		'jquery' : 			'jquery/jquery-debug.js',
-		'jquery/jquery' : 	'jquery/jquery-debug.js',
+		'jquery' : 			'jquery/jquery/1.10.1/jquery-debug.js',
+		'jquery/jquery' : 	'jquery/jquery/1.10.1/jquery-debug.js',
+		'jquery/easyui' : 	'jquery/easyui/jquery.easyui.min.js',
 		'art/template' : 	'art/template/template.js',
 		'art/artdialog' : 	'art/artdialog/src/dialog-plus.js',
 		'moment/moment': 	'moment/moment/moment.js',
@@ -100,7 +101,7 @@ seajs.config({
 		'apache/amq': 		'apache/amq/amq.js'
 	},
 	paths : {
-		'jquery' : 	cdnbase+'lib/jquery/jquery/1.10.1',
+		'jquery' : 	cdnbase+'lib/jquery',
 		'art' : 	cdnbase+'lib/art',
 		'moment': 	cdnbase+'lib/moment',
 		'syl': 		cdnbase+'lib/syl',
