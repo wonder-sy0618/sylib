@@ -92,6 +92,7 @@ seajs.config({
 		'art/artdialog' : 	'art/artdialog/src/dialog-plus.js',
 		'moment/moment': 	'moment/moment/moment.js',
 		'syl/utils': 		'syl/utils/utils.js',
+		'syl/utils/templatehelper'	: 'syl/utils/templatehelper.js',
 		'syl/base64': 		'syl/base64/base64.js',
 		'syl/notify': 		'syl/notify/notify.js',
 		'syl/device': 		'syl/device/device.js',

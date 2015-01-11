@@ -53,6 +53,11 @@
 					]]
 				});
 				$("#demo_datagrid").datagrid('loadData', data);
+				
+				// easyui 已经自动添加parser插件
+				// 如果出现动态添加控件或者ajax加载页面后不能自动渲染的问题，请调用该方法
+				$.parser.parse();
+				
 			});
 		</script>
 		
