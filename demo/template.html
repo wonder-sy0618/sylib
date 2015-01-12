@@ -42,5 +42,37 @@
 			</ul>
 		</script>
 		
+		
+		
+		
+		<br/>
+		<br/>
+		<h1>templatehelper</h1>
+		<div id="demo_templatehelper" >
+			
+		</div>
+		<script>
+			seajs.use(["syl/utils/templatehelper"], function(templatehelper) {
+				var data = {
+					title: '标签',
+					list: ['文艺', '博客', '摄影', '电影', '民谣', '旅行', '吉他']
+				};
+				templatehelper.tmpl('template\\/demo\\.tmpl', data, function(html) {
+					document.getElementById("demo_templatehelper").innerHTML = html;
+				});
+			});
+		</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	</body>
 </html>
