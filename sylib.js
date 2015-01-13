@@ -112,7 +112,8 @@ seajs.config({
 		'bootstrap/treeview': 		'bootstrap/treeview/bootstrap-treeview.min.js',
 		'douglascrockford/json': 	'douglascrockford/json/json.js',
 		'gwjjeff/cryptojs': 		'gwjjeff/cryptojs/cryptojs.js',
-		'apache/amq': 		'apache/amq/amq.js'
+		'apache/amq': 		'apache/amq/amq.js',
+		'padolsey/grayscale': 		'padolsey/grayscale.js'
 	},
 	paths : {
 		'jquery' : 	cdnbase+'lib/jquery',
@@ -121,6 +122,7 @@ seajs.config({
 		'syl': 		cdnbase+'lib/syl',
 		'baidu': 	cdnbase+'lib/baidu',
 		'bootstrap': cdnbase+'lib/bootstrap',
+		'padolsey' : cdnbase+'lib/padolsey',
 		'douglascrockford': cdnbase+'lib/douglascrockford',
 		'gwjjeff': 	cdnbase+'lib/gwjjeff',
 		'apache': 		cdnbase+'lib/apache'
