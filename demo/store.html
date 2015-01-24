@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	</head>
+	<body>
+		
+		<script src="../sylib.js" type="text/javascript" charset="utf-8"></script>
+		
+		<table id="store_demo" >
+			<tr>
+				<th>key</th>
+				<th>value</th>
+				<th>opera</th>
+			</tr>
+			<tr align="center" >
+				<td><input type="text" class="input_key" value="" /></td>
+				<td><input type="text" class="input_value" value="" /></td>
+				<td>
+					<button type="button" class="btn_add" >set</button>
+					<button type="button" class="btn_clear" >clear all</button>
+				</td>
+			</tr>
+		</table>
+		
+		<script>
+			seajs.use(['jquery/jquery', 'cloudhead/store'], function($, store) {
+				//
+				if (store.get("_keylist")) {
+					$.each(store.get("_keylist").split(","), function(k, v) {
+						var html = '<tr align="center" >'
+							+'<td>'+v+'</td><td>'+store.get(v)+'</td>'
+							+'<td><button type="button" class="btn_rm" >remove</button></td></tr>';
+						$("#store_demo tr").eq(0).after(html);
+					});
+				}
+				//
+				$(document).on("click", ".btn_rm", function() {
+					var key = $(this).parents("tr").find("td").eq(0).text();
+				}).on("click", ".btn_clear", function() {
+					store.clear();
+					window.location.href = window.location.href;
+				}).on("click", ".btn_add", function() {
+					var key = $(".input_key").val();
+					var val = $(".input_value").val();
+					if (key && val && key != '' && val != '') {
+						//
+						var keys = store.get("_keylist");
+						if (!keys) {
+							keys = [];
+						} else {
+							keys = keys.split(",")
+						}
+						if (keys.indexOf(key) == -1) {
+							keys.push(key);
+						}
+						store.set("_keylist", keys.join(","));
+						//
+						store.set(key, val);
+						window.location.href = window.location.href;
+					}
+				}).on("click", ".btn_rm", function() {
+					var rmkey = $(this).parents("tr").find("td").eq(0).text();
+					//	
+					var keys = store.get("_keylist");
+					if (!keys) {
+						keys = [];
+					} else {
+						keys = keys.split(",")
+					}
+					var nlist = [];
+					$.each(keys, function(k, v) {
+						if (v != rmkey) {
+							nlist.push(v);
+						}
+					});
+					store.set("_keylist", nlist.join(","));
+					store.remove(rmkey);
+					window.location.href = window.location.href;
+				});
+			});
+		</script>
+		
+	</body>
+</html>

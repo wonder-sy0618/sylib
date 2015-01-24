@@ -114,7 +114,8 @@ seajs.config({
 		'douglascrockford/json': 	'douglascrockford/json/json.js',
 		'gwjjeff/cryptojs': 		'gwjjeff/cryptojs/cryptojs.js',
 		'apache/amq': 		'apache/amq/amq.js',
-		'padolsey/grayscale': 		'padolsey/grayscale.js'
+		'padolsey/grayscale': 		'padolsey/grayscale.js',
+		'cloudhead/store': 		'cloudhead/store.js'
 	},
 	paths : {
 		'jquery' : 	cdnbase+'lib/jquery',
@@ -126,6 +127,7 @@ seajs.config({
 		'padolsey' : cdnbase+'lib/padolsey',
 		'douglascrockford': cdnbase+'lib/douglascrockford',
 		'gwjjeff': 	cdnbase+'lib/gwjjeff',
-		'apache': 		cdnbase+'lib/apache'
+		'apache': 		cdnbase+'lib/apache',
+		'cloudhead':	cdnbase+'lib/cloudhead'
 	}
 });
