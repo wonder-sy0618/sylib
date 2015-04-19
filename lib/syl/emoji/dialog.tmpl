@@ -1,0 +1,59 @@
+
+<link href="<%=opt.emoji_resources_cdn %>css/style.css" media="all" rel="stylesheet" />
+
+<div class="mengban emoji_dialog" >
+	<div class="ly_bq">
+		<div class="lybq_title">
+			选择表情<a href="#"><span class="ly_close" style="padding-top: 2px;">
+			<img src="<%=opt.emoji_resources_cdn %>images/close.png" width="20" height="20"></span></a>
+		</div>
+		<div class="bqtu">
+			<table border="0" cellspacing="0" cellpadding="0" class="bq_tab">
+				<tr>
+					<% for ( var e_index = 0; e_index < emojis.length; e_index++) { e = emojis[e_index]; %>
+						<td class="emoji" emoji="<%=e %>" >:<%=e %>:</td>
+						<% if( e_index % 8 == 7 ) { %>
+							<% if( Math.floor(e_index / 8) % 4 == 3 ) { %>
+									</tr>
+								</table>
+								<table border="0" cellspacing="0" cellpadding="0" class="bq_tab" style="display:none;" >
+									<tr>
+							<% } else { %>
+								</tr>
+								<tr>
+							<% } // if %>
+						<% } // if %>
+					<% } // for %>
+				</tr>
+			</table>
+		</div>
+		<div class="ly_fenye">
+			<table border="0" cellspacing="0" cellpadding="0"
+				style="margin: auto;">
+				<tr>
+					<td style="padding-right: 5px; padding-bottom: 2px;"><div
+							class="fenye_arrowl">&nbsp;</div></td>
+					<td class="fenye_shuzi">
+						<a href="#">1</a>
+						<a href="#" class="current">2</a>
+						<a href="#">3</a>
+					</td>
+					<td style="padding-left: 5px; padding-bottom: 2px;"><div
+							class="fenye_arrowr">&nbsp;</div></td>
+				</tr>
+			</table>
+
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+

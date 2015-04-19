@@ -1,0 +1,41 @@
+
+.fenye_arrowr{ background:url(../images/arrow-r.png) no-repeat center; display:block; width:30px; height:20px; border:1px solid #dedede; margin-left:5px;}
+
+.fenye_arrowl{ background:url(../images/arrow-l.png) no-repeat center; display:block; width:30px; height:20px; border:1px solid #dedede; margin-left:5px;}
+
+.mengban{ height:100%; width:100%; position:fixed; background-color:rgba(0,0,0,0.4); z-index:3000; left:0px; top:0px;}
+
+/*留言表情排版*/
+
+.ly_bq{ 
+    width:300px; 
+	border:0px solid #e6e6e6;
+	padding:0px 0px;
+	position:fixed;
+	left:50%; top:50%;
+	margin-left:-150px; margin-top:-130px; background-color:#FFF;
+	height:263px;
+	box-shadow:0 0 7px #636363; /*四周发光*/
+	 
+	}
+.ly_bq .bqtu{ height:178px; padding:10px 6px;}
+.bq_tab{ margin:auto;}
+.bq_tab td{ padding:1px;}
+.bq_tab td img{ width:32px; height:32px;}
+.ly_bq .lybq_title{  font-size:15px;background-color:#0f83cd; border-bottom:1px solid #e6e6e6; color:#FFF;  line-height:2.2em;  padding-left:10px; overflow:hidden; height:32px;}
+.ly_close{ float:right; height:26px; width:32px; background-color:#0f83cd; border-left:0px solid #e6e6e6;  display:inline-block; text-align:center; padding-top:8px; margin-top:4px;}
+.ly_fenye{ padding-top:7px; border-top:1px solid #e6e6e6; background-color:#f8f8f8; padding-bottom:5px;}
+.fenye_arrowr{ display:block; width:30px; height:20px; border:1px solid #dedede; margin-left:5px;}
+.fenye_arrowr2{  display:block; width:30px; height:20px; border:1px solid #efefef; margin-left:5px;}
+
+.fenye_arrowl{display:block; width:30px; height:20px; border:1px solid #dedede; margin-left:5px;}
+.fenye_arrowl2{display:block; width:30px; height:20px; border:1px solid #efefef; margin-left:5px;}
+
+.fenye_shuzi{}
+.fenye_shuzi a{  font-size:13px; padding:2px 10px; background-color:#FFF; text-decoration:none; margin-left:8px; color:#444444; line-height:18px; border:1px solid #dedede;}
+.fenye_shuzi a.current{ background-color:#f0f0f0;}
+
+span.emoji-outer {font-size:2em;}
+.bq_tab td, .ly_fenye td {cursor:pointer;}
+
+
