@@ -24,21 +24,26 @@
 		<script>
 			seajs.use(['jquery/jquery', 'syl/emoji'], function($, emoji) {
 				
-				$(".emoji_btn").click(function() {
-					emoji.dialog({
-						emoji_select_callback : function(emoji_html, code) {
-							
-							$(".content").append(emoji_html);
-							
-						}
+				try {
+					$(".emoji_btn").click(function() {
+						emoji.dialog({
+							emoji_select_callback : function(emoji_html, code) {
+								
+								$(".content").append(emoji_html);
+								
+							}
+						});
 					});
-				});
-				$(".emoji_reduction_btn").click(function() {
-					emoji.reduction_emoji($(".content"));
-				});
-				$(".emoji_show_btn").click(function() {
-					emoji.show_emoji($(".content"));
-				});
+					$(".emoji_reduction_btn").click(function() {
+						emoji.reduction_emoji($(".content"));
+					});
+					$(".emoji_show_btn").click(function() {
+						emoji.show_emoji($(".content"));
+					});
+					
+				} catch (e) {
+					console.log(e);
+				}
 				
 			});
 		</script>
