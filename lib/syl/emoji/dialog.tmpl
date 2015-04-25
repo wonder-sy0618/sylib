@@ -13,7 +13,7 @@
 					<% for ( var e_index = 0; e_index < emojis.length; e_index++) { e = emojis[e_index]; %>
 						<td class="emoji" emoji="<%=e %>" emoji_state="code" >[<%=e %>]</td>
 						<% if( e_index % 8 == 7 ) { %>
-							<% if( Math.floor(e_index / 8) % 4 == 3 ) { %>
+							<% if( Math.floor(e_index / 8) % 5 == 4 ) { %>
 									</tr>
 								</table>
 								<table border="0" cellspacing="0" cellpadding="0" class="bq_tab" style="display:none;" >
