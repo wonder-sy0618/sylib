@@ -24,8 +24,8 @@
 		<script>
 			seajs.use(['jquery/jquery', 'syl/emoji'], function($, emoji) {
 				
-				try {
-					$(".emoji_btn").click(function() {
+				$(".emoji_btn").click(function() {
+					try {
 						emoji.dialog({
 							emoji_select_callback : function(emoji_html, code) {
 								
@@ -33,17 +33,24 @@
 								
 							}
 						});
-					});
-					$(".emoji_reduction_btn").click(function() {
+					} catch (e) {
+						console.log(e);
+					}
+				});
+				$(".emoji_reduction_btn").click(function() {
+					try {
 						emoji.reduction_emoji($(".content"));
-					});
-					$(".emoji_show_btn").click(function() {
+					} catch (e) {
+						console.log(e);
+					}
+				});
+				$(".emoji_show_btn").click(function() {
+					try {
 						emoji.show_emoji($(".content"));
-					});
-					
-				} catch (e) {
-					console.log(e);
-				}
+					} catch (e) {
+						console.log(e);
+					}
+				});
 				
 			});
 		</script>
