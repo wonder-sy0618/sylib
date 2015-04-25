@@ -11,12 +11,35 @@
 		
 		<script src="../sylib.js" type="text/javascript" charset="utf-8"></script>
 		
+		<button type="button" class="emoji_btn" >插入表情</button>
+		
+		<button type="button" class="emoji_reduction_btn" >还原表情</button>
+		
+		<button type="button" class="emoji_show_btn" >显示表情</button>
+		
 		<br/><br/>
+		
+		<div class="content" ></div>
+		
 		<script>
 			seajs.use(['jquery/jquery', 'syl/emoji'], function($, emoji) {
-				console.log($, emoji);
 				
-				emoji.dialog();
+				$(".emoji_btn").click(function() {
+					emoji.dialog({
+						emoji_select_callback : function(emoji_html, code) {
+							
+							$(".content").append(emoji_html);
+							
+						}
+					});
+				});
+				$(".emoji_reduction_btn").click(function() {
+					emoji.reduction_emoji($(".content"));
+				});
+				$(".emoji_show_btn").click(function() {
+					emoji.show_emoji($(".content"));
+				});
+				
 			});
 		</script>
 		
