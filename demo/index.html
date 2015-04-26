@@ -7,7 +7,7 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	</head>
-	<body>
+	<body style="min-height:300px;" >
 		
 		<h1>sylib demo list</h1>
 		<div id="list_show" ></div>
@@ -22,11 +22,13 @@
 		
 		<script src="../sylib.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" >
-			seajs.use(['jquery/jquery', 'art/template'], function($, template) {
+			seajs.use(['jquery/jquery', 'art/template', 'jquery/showLoading'], function($, template, loading) {
+				$("body").showLoading();
 				$.getJSON("demolist.json", function(data) {
 					$("#list_show").append(template('tmpl_list', {
 						demo_list : data
 					}));
+					$("body").hideLoading();
 				});
 			});
 		</script>

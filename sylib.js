@@ -99,6 +99,7 @@ seajs.config({
 		'jquery/jquery' : 	'jquery/jquery/1.10.1/jquery-debug.js',
 		'jquery/easyui' : 	'jquery/easyui/jquery.easyui.min.js',
 		'jquery/cookie' : 	'jquery/cookie/jquery.cookie.js',
+		'jquery/showLoading' : 	'jquery/showLoading/js/jquery.showLoading.js',
 		'art/template' : 	'art/template.js',
 		'art/template-native' : 	'art/template-native.js',
 		'art/artdialog' : 	'art/artdialog/src/dialog-plus.js',

@@ -7,12 +7,13 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	</head>
-	<body>
+	<body style="min-height:300px;" >
 		
 		<script src="sylib.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" >
 			console.log(window.syl.utils.getCdnBasePath());
-			seajs.use(['jquery/jquery'], function($) {
+			seajs.use(['jquery/jquery', 'jquery/showLoading'], function($, loading) {
+				$("body").showLoading();
 				$.getJSON("https://api.github.com/repos/wonder-sy0618/sylib/commits", function(data) {
 					window.location.href="http://cdn.rawgit.com/wonder-sy0618/sylib/"+data[0].sha+"/demo/index.html";
 				});
