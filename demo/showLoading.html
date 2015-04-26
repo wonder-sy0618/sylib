@@ -17,6 +17,7 @@
 			seajs.use('jquery/jquery', function($) {
 				$(".loading_show").click(function() {
 					seajs.use(['jquery/showLoading'], function(loading) {
+						$(".loading_area").hideLoading();
 						$(".loading_area").showLoading({
 							css : {
 								background : 'url(resources/showLoading/loading.gif)',
