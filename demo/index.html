@@ -22,13 +22,15 @@
 		
 		<script src="../sylib.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" >
-			seajs.use(['jquery/jquery', 'art/template', 'jquery/showLoading'], function($, template, loading) {
+			seajs.use(['jquery/showLoading'], function(loading) {
 				$("body").showLoading();
-				$.getJSON("demolist.json", function(data) {
-					$("#list_show").append(template('tmpl_list', {
-						demo_list : data
-					}));
-					$("body").hideLoading();
+				seajs.use(['jquery/jquery', 'art/template'], function($, template) {
+					$.getJSON("demolist.json", function(data) {
+						$("#list_show").append(template('tmpl_list', {
+							demo_list : data
+						}));
+						$("body").hideLoading();
+					});
 				});
 			});
 		</script>

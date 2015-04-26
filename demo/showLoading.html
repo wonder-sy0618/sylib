@@ -12,18 +12,32 @@
 		<script src="../sylib.js" type="text/javascript" charset="utf-8"></script>
 		
 		<script>
-			seajs.use(['jquery/showLoading'], function(loading) {
-				
-				$("body").showLoading({
-					css : {
-						background : 'url(resources/showLoading/loading.gif)',
-						height: 64,
-						width: 64
-					}
+			seajs.use('jquery/jquery', function($) {
+				$(".loading_show").click(function() {
+					seajs.use(['jquery/showLoading'], function(loading) {
+						$("body").showLoading({
+							css : {
+								background : 'url(resources/showLoading/loading.gif)',
+								height: 64,
+								width: 64
+							}
+						});
+					});
 				});
-				
+				$(".loading_hide").click(function() {
+					seajs.use(['jquery/showLoading'], function(loading) {
+						$("body").hideLoading();
+					});
+				});
 			});
 		</script>
+		
+		<br/><br/>
+		
+		<div>
+			<button type="button" class="loading_show" >显示Loading</button>
+			<button type="button" class="loading_hide" >隐藏Loading</button>
+		</div>
 		
 	</body>
 </html>
