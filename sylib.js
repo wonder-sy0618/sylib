@@ -111,6 +111,7 @@ seajs.config({
 		'syl/notify': 		'syl/notify/notify.js',
 		'syl/device': 		'syl/device/device.js',
 		'syl/emoji': 		'syl/emoji/emoji.js',
+		'syl/wxjssdk': 		'syl/wx/wxjssdk.js',
 		'baidu/ueditor': 	'baidu/ueditor/ueditor.js',
 		'bootstrap/bootstrap': 		'bootstrap/bootstrap/js/bootstrap.min.js',
 		'bootstrap/treeview': 		'bootstrap/treeview/bootstrap-treeview.min.js',

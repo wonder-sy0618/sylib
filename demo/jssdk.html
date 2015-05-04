@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>wx_jssdk</title>
+</head>
+<body>
+
+
+	 	
+	<button id="btn_choose" style="width:100%; height:100px; margin-top:300px; font-size:30px;" >选择相册</button>
+	
+	
+	<script src="../sylib.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" >
+		seajs.use(["jquery/jquery", "syl/wxjssdk"], function($, jssdk) {
+
+			
+			jssdk.shareCustom(
+				'wx_test_shiying', 
+				'title', 
+				'desc', 
+				'http://ico.ooopic.com/iconset01/signs-icons/512/143463.png', 
+				'http://www.baidu.com', 
+				function(type, result, parmar) {
+					alert("type:"+type+",result:"+result+",parmar:"+parmar);
+				});
+			
+			
+			$("#btn_choose").click(function() {
+				jssdk.initJssdk('wx_test_shiying', 'chooseImage', function(action, result, wx) {
+					wx.chooseImage({
+					    success: function (res) {
+					        var localIds = res.localIds;
+					        alert("local id : " + localIds);
+					    }
+					});
+				});
+			});
+			
+		});
+	</script>
+	 
+	 
+	 
+
+</body>
+</html>
