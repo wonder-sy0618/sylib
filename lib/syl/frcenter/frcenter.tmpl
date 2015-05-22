@@ -1,0 +1,67 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
+    <div class="container-fluid">
+        <div class="navbar-header" >
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="javascript:void(0);"><img src="{{path_logo }}" /><div>{{title }}</div></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- 导航菜单 -->
+                {{each data_menus.navbarmenu as m index_m}}
+                <li>
+                    <a 
+                        href="{{m.linkurl }}" 
+                        clientevent="{{m.clientevent }}" 
+                        class="menuitem" 
+                    >{{m.name }}</a>
+                </li>
+                {{/each}}   <!-- /导航菜单 -->
+            </ul>
+            
+            <!-- 低分辨率屏幕菜单 -->
+            {{each data_menus.menus as menu1 index_menu1}}
+            <ul class="nav navbar-nav navbar-right {{menu1.class }}">
+                {{each menu1.menus as menu2 index_menus}}
+                    <li class="visible-xs-block {{menu2.class }}" >
+                         <a href="{{menu2.linkurl }}" clientevent="{{menu2.clientevent }}" class="menuitem" 
+                            >{{menu2.name }}</a>
+                    </li>
+                {{/each}}
+            </ul>
+            {{/each}}
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+	<div class="row">
+        
+        <!-- 普通屏幕分辨率菜单 -->
+		<div class="col-sm-3 col-md-2 sidebar menus">
+            {{each data_menus.menus as menu1 index_menu1}}
+            <div class="panel panel-default {{menu1.class }}">
+                <div class="panel-heading">{{menu1.name }}</div>
+                <div class="panel-body">
+                    <ul class="nav nav-sidebar">
+                        {{each menu1.menus as menu2 index_menus}}
+                        <li class="{{menu2.class }}" >
+                            <a href="{{menu2.linkurl }}" clientevent="{{menu2.clientevent }}" class="menuitem" 
+                            >{{menu2.name }}</a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+            {{/each}}
+		</div>  <!-- /普通屏幕分辨率菜单 -->
+
+		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <!-- 中央显示区域 -->
+		</div>
+
+	</div>
+</div>

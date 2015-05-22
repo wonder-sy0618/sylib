@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	</head>
+	<body style="display:none;" >
+    
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <input type="file" id="exampleInputFile">
+                <p class="help-block">Example block-level help text here.</p>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Check me out
+                </label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        
+        
+		
+		<script src="../sylib.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+            /*
+			seajs.use(['syl/frcenter', 'syl/utils/utils'], function(frcenter, utils) {
+				frcenter.init({
+                    path_data : utils.getCdnBasePath() + "lib/syl/frcenter/menus.json"
+                });
+			});
+            */
+            
+			seajs.use(['jquery/showLoading', 'syl/frcenter'], function(showLoading, frcenter) {
+                $("body").hide().showLoading();
+				frcenter.init({
+                    data : {
+                        menus : [{
+                            "name" : "节目单管理",
+                            "menus" : [{
+                                "name" : "直播节目",
+                                "linkurl" : "javascript:void(0);"
+                            },{
+                                "name" : "直播节目单",
+                                "linkurl" : "javascript:void(0);"
+                            }]
+                        }, {
+                            "name" : "个人设置",
+                            "menus" : [{
+                                "name" : "个人信息",
+                                "linkurl" : "http://www.baidu.com",
+                                "clientevent" : "menu_person_info",
+                                "class" : "psclass"
+                            }],
+                            "class" : "pclass"
+                        }],
+                        navbarmenu : [{
+                            "name" : "退出",
+                            "linkurl" : "#",
+                            "clientevent" : "menu_exist"
+                        }]
+                    },
+                    event : function(menus) {
+                        menus.on("menu_person_info", function() {
+                            return confirm("确定要继续吗？");
+                        }).on("menu_exist", function() {
+                            return confirm("确定要退出吗？");
+                        });
+                    },
+                    callback : function() {
+                        $("body").hideLoading().show();
+                    }
+                });
+			});
+            
+		</script>
+        
+        <style>
+            .pclass .panel-heading {
+                font-size : 20px;
+            }
+            .psclass a {
+                color : red;
+            }
+        </style>
+		
+	</body>
+</html>

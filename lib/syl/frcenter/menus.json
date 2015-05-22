@@ -1,0 +1,52 @@
+{
+    "menus" : [{
+        "name" : "模块管理",
+        "menus" : [{
+            "name" : "直播",
+            "linkurl" : "http://www.baidu.com"
+        }, {
+            "name" : "OnAir精选",
+            "linkurl" : "http://www.baidu.com"
+        }, {
+            "name" : "微播江湖",
+            "linkurl" : "http://www.baidu.com"
+        }, {
+            "name" : "近期活动",
+            "linkurl" : "http://www.baidu.com"
+        }, {
+            "name" : "广告",
+            "linkurl" : "http://www.baidu.com"
+        }]
+    }, {
+        "name" : "节目单管理",
+        "menus" : [{
+            "name" : "直播节目",
+            "linkurl" : "http://www.baidu.com"
+        },{
+            "name" : "直播节目单",
+            "linkurl" : "http://www.baidu.com"
+        }]
+    }, {
+        "name" : "个人设置",
+        "menus" : [{
+            "name" : "个人信息",
+            "linkurl" : "http://www.baidu.com",
+            "clientevent" : "menu_person_info",
+            "class" : "psclass"
+        }],
+        "class" : "pclass"
+    }],
+    navbarmenu : [{
+        "name" : "admin",
+        "linkurl" : "#"
+    }, {
+        "name" : "帮助",
+        "linkurl" : "#"
+    }, {
+        "name" : "修改密码",
+        "linkurl" : "#"
+    }, {
+        "name" : "退出登录",
+        "linkurl" : "#"
+    }]
+}

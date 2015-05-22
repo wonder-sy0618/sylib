@@ -112,6 +112,7 @@ seajs.config({
 		'syl/device': 		'syl/device/device.js',
 		'syl/emoji': 		'syl/emoji/emoji.js',
 		'syl/wxjssdk': 		'syl/wx/wxjssdk.js',
+		'syl/frcenter': 		'syl/frcenter/frcenter.js',
 		'baidu/ueditor': 	'baidu/ueditor/ueditor.js',
 		'bootstrap/bootstrap': 		'bootstrap/bootstrap/js/bootstrap.min.js',
 		'bootstrap/treeview': 		'bootstrap/treeview/bootstrap-treeview.min.js',
