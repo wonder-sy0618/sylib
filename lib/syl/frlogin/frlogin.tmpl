@@ -1,0 +1,125 @@
+<div class="content">
+
+    <style>
+        *{ margin:0px; padding:0px;}
+        body{ margin:0px; padding:0px; font-size:14px; line-height:25px; text-align:center; font-family:"微软雅黑", "宋体"}
+        div,ul,li,span,h1,h2{ margin:0px; padding:0px; list-style:none;}
+        .clear{ clear:both; line-height:0px; height:0px;}
+        form{ margin:0px; padding:0px;}
+        .top{  height:85px; overflow:hidden; background-color:#f2f2f2; text-align:center;}
+        .top_n{ width:960px; margin:auto; text-align:left; padding-top:5px;}
+
+        .content{ width:100%; /*position:absolute; z-index:2;top:50%; margin-top:-360px;*/}
+
+        .main{ background-image:url({{path_center_bg }}); background-position:center; background-repeat:repeat-y; background-size:100%; height:460px; width:100%; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+            src='login-2.jpg',
+            sizingMethod='scale');}
+        .mainn{  }
+        .main_n{ width:960px; margin:auto; text-align:left; height:460px; }
+
+        .login{ border:1px #dfdfdf solid; background-color:#FFF;   float:right; margin-right:10px; margin-top:60px;  width:362px; padding:20px; padding-top:15px; padding-bottom:0px; height:300px;
+        filter:progid:DXImageTransform.Microsoft.Shadow(color=#a9a9a9,direction=120,strength=4);
+           -moz-box-shadow: 2px 2px 6px #a9a9a9;
+           -webkit-box-shadow: 2px 2px 6px #a9a9a9;
+           box-shadow:2px 2px 6px #a9a9a9;
+           border-radius:5px;
+
+        }
+        .login_tab{}
+        .login_tab td{ padding:7px 0px;}
+        .l988{ float:left; width:450px; text-align:right; padding-top:120px; padding-right:50px;}
+        .px14{ font-size:17px; color:#7f7f7f;}
+
+        .input1 {
+            padding: 0px 5px; width:82px; color:#565656;
+            height:34px;
+            line-height:24px;
+            border: 0px;
+            overflow: hidden;
+            font-size: 13px;
+            border:1px solid #bfbfbf; background-color:#f2f2f2; width:310px; font-family:"微软雅黑", "宋体"
+             
+        }
+        .yzm{ float:left; width:150px;}
+        .yzm_tu{ float:right; width:140px;}
+        .yzm_tu img{ width:140px; height:36px; cursor: pointer;}
+
+        .denlu_an{ cursor:pointer; border-radius:5px; background-color:#60b5cc; padding:10px 0px; width:100%; display:block; text-align:center; font-size:14px; color:#FFF; text-decoration:none; border:0px;}
+        .tishi{ color:#f05769; text-align:left; font-size:14px;}
+
+        .down{  width:100%;}
+
+        .footer{ 
+            width:960px; margin:auto; 
+            background:url({{path_line}}) no-repeat  center top; 
+            padding-top:20px; margin-top:71px; 
+            text-align:center;
+            font-size:12px; 
+            line-height:25px; 
+            padding-bottom:30px; color:#757474; 
+            }
+        .footer a{ color:#757474; font-size:12px;}
+    </style>
+						
+    <form role="form" method="post" class="validate_form" >
+        <!--logo-->
+        <div class="top">
+            <div class="top_n">
+                <img src="{{path_logo }}" height="72" />
+            </div>
+        </div>
+        <!--logo结束-->
+        <div class="main">
+            <div class="main_n">
+                <div class="l988">
+                    <img src="{{path_center_fr }}" width="320" />
+                </div>
+                <div class="login">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0"
+                        class="login_tab">
+                        <tr>
+                            <td class="px14">登录</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" class="input1" placeholder="账号" name="username" value="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="password" class="input1" placeholder="密码" name="password" value="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div style="width:322px; margin-left:0px;" >
+                                    <div class="yzm">
+                                        <input type="text" class="input1" placeholder="验证码"style="width:145px;"  name="randcode" value="" />
+                                    </div>
+                                    <div class="yzm_tu">
+                                        <img src="{{path_randcode }}" class="randcode" />
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 8px;">
+                                <input type="submit" class="denlu_an" value="登录" >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 8px; display:none;" class="tishi notice">请输入用户名</td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="down">
+            <div class="footer">版权所有：988管理平台&nbsp;&nbsp;&nbsp;&nbsp;技术支持：西安彩拓网络科技有限公司</div>
+        </div>
+    </form>
+    
+</div>
