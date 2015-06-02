@@ -116,6 +116,7 @@ seajs.config({
 		'syl/frcenter': 		'syl/frcenter/frcenter.js',
 		'syl/frlogin': 		'syl/frlogin/frlogin.js',
 		'baidu/ueditor': 	'baidu/ueditor/ueditor.js',
+		'baidu/WebUpoaderLoader': 	'baidu/webuploader/WebUpoaderLoader.js',
 		'bootstrap/bootstrap': 		'bootstrap/bootstrap/js/bootstrap.min.js',
 		'bootstrap/treeview': 		'bootstrap/treeview/bootstrap-treeview.min.js',
 		'douglascrockford/json': 	'douglascrockford/json/json.js',
