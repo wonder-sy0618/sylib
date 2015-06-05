@@ -1,0 +1,96 @@
+{
+    "menus" : [{
+        "name" : "子站管理",
+        "menus" : [{
+            "name" : "内容管理",
+			"menus" : [{
+				"name" : "图片新闻",
+				"linkurl" : "#"
+			}, {
+				"name" : "通知公告",
+				"linkurl" : "#"
+			}, {
+				"name" : "组织机构",
+				"linkurl" : "#"
+			}, {
+				"name" : "服务大厅",
+				"linkurl" : "#"
+			}, {
+				"name" : "网上服务",
+				"linkurl" : "#"
+			}, {
+				"name" : "网上互动",
+				"linkurl" : "#"
+			}]
+        }]
+    }, {
+        "name" : "广告管理",
+        "menus" : [{
+            "name" : "首页广告",
+            "linkurl" : "#"
+        },{
+            "name" : "友情链接",
+            "linkurl" : "#"
+        }]
+    }, {
+        "name" : "统计报表",
+        "menus" : [{
+            "name" : "子站访问统计",
+            "linkurl" : "#"
+        }, {
+            "name" : "人才市场统计",
+			"menus" : [{
+				"name" : "注册用户数量",
+				"linkurl" : "#"
+			}, {
+				"name" : "应聘人数",
+				"linkurl" : "#"
+			}, {
+				"name" : "注册单位数",
+				"linkurl" : "#"
+			}, {
+				"name" : "有点数的单位数",
+				"linkurl" : "#"
+			}, {
+				"name" : "发布招聘的单位数",
+				"linkurl" : "#"
+			}]
+        }, {
+            "name" : "个人求职统计",
+			"menus" : [{
+				"name" : "专业分布",
+				"linkurl" : "#"
+			}, {
+				"name" : "城市分布",
+				"linkurl" : "#"
+			}, {
+				"name" : "教育程度分布",
+				"linkurl" : "#"
+			}, {
+				"name" : "期望工作类型分布",
+				"linkurl" : "#"
+			}, {
+				"name" : "每个专业求职人数",
+				"linkurl" : "#"
+			}, {
+				"name" : "每个城市就业人数",
+				"linkurl" : "#"
+			}, {
+				"name" : "每种教育程度求职人数",
+				"linkurl" : "#"
+			}]
+        }, {
+            "name" : "企业招聘统计",
+            "linkurl" : "#"
+        }]
+    }],
+    "navbarmenu" : [{
+        "name" : "退出登录",
+		"icon" : "guanji.png",
+        "linkurl" : "#"
+    }, {
+        "name" : "修改密码",
+		"icon" : "miyao.png",
+        "linkurl" : "#"
+    }]
+}

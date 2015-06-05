@@ -35,14 +35,21 @@
 		
 		<script src="../sylib.js" type="text/javascript" charset="utf-8"></script>
 		<script>
-            /*
-			seajs.use(['syl/frcenter', 'syl/utils/utils'], function(frcenter, utils) {
+			
+			/*
+			seajs.use(['jquery/jquery', 'jquery/showLoading', 'syl/frcenter', 'syl/utils/utils'], 
+			function($, showLoading, frcenter, utils) {
+                $("body").hide().showLoading();
 				frcenter.init({
-                    path_data : utils.getCdnBasePath() + "lib/syl/frcenter/menus.json"
+                    path_data : utils.getCdnBasePath() + "lib/syl/frcenter/menus.json",
+                    callback : function() {
+                        $("body").hideLoading().show();
+                    } 
                 });
 			});
-            */
+			*/
             
+            /*
 			seajs.use(['jquery/showLoading', 'syl/frcenter'], function(showLoading, frcenter) {
                 $("body").hide().showLoading();
 				frcenter.init({
@@ -82,6 +89,17 @@
                     callback : function() {
                         $("body").hideLoading().show();
                     }
+                });
+			});
+            */
+			
+			seajs.use(['jquery/jquery', 'jquery/showLoading', 'syl/frcenter2', 'syl/utils/utils'], 
+			function($, showLoading, frcenter, utils) {
+                $("body").hide().showLoading();
+				frcenter.init({
+                    callback : function() {
+                        $("body").hideLoading().show();
+                    } 
                 });
 			});
             

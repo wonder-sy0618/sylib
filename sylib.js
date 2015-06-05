@@ -114,6 +114,7 @@ seajs.config({
 		'syl/emoji': 		'syl/emoji/emoji.js',
 		'syl/wxjssdk': 		'syl/wx/wxjssdk.js',
 		'syl/frcenter': 		'syl/frcenter/frcenter.js',
+		'syl/frcenter2': 		'syl/frcenter2/frcenter.js',
 		'syl/frlogin': 		'syl/frlogin/frlogin.js',
 		'baidu/ueditor': 	'baidu/ueditor/ueditor.js',
 		'baidu/WebUpoaderLoader': 	'baidu/webuploader/WebUpoaderLoader.js',
