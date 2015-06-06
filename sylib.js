@@ -37,6 +37,16 @@
 			}
 			return res;
 		}
+		// >> "{0}{1}".format("aa", "bb")
+		// >> aabb
+		String.prototype.format = function() {
+			var args = arguments;
+			return this.replace(/{(\d+)}/g, function(match, number) { 
+				return typeof args[number] != 'undefined'
+					? args[number]
+					: match;
+			});
+		  };
 	})();
 	
 	
@@ -113,6 +123,7 @@ seajs.config({
 		'syl/device': 		'syl/device/device.js',
 		'syl/emoji': 		'syl/emoji/emoji.js',
 		'syl/wxjssdk': 		'syl/wx/wxjssdk.js',
+		'syl/mtypes': 		'syl/mtypes/mtypes.js',
 		'syl/frcenter': 		'syl/frcenter/frcenter.js',
 		'syl/frcenter2': 		'syl/frcenter2/frcenter.js',
 		'syl/frlogin': 		'syl/frlogin/frlogin.js',

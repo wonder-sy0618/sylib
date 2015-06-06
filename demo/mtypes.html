@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	</head>
+	<body>
+		
+		<script src="../sylib.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script>
+			seajs.use(['jquery/jquery', 'syl/mtypes', 'syl/utils'], function($, mtypes, utils) {
+				console.log(mtypes);
+				mtypes.setup({
+					apibaseurl : utils.getCdnBasePath() + 'lib/syl/mtypes/json/',
+					apis : {
+						"language"	: "language.json",
+						"industry"	: "industry.json",
+						"company"	: "company.json",
+						"province"	: "province.json",
+						"city"	: "city.json",
+						"area"	: "area.json",
+						"positionfirst"	: "positionfirst.json",
+						"positionsecond"	: "positionsecond.json",
+						"positionthird"	: "positionthird.json"
+					}
+				});
+				mtypes.language(function(json) {
+						console.log("language", json);
+					});
+				mtypes.industry(function(json) {
+						console.log("industry", json);
+					});
+				mtypes.company(function(json) {
+						console.log("company", json);
+					});
+				mtypes.province(function(json) {
+						console.log("province", json);
+					});
+				mtypes.city(function(json) {
+						console.log("city", json);
+					}, 1);
+				mtypes.area(function(json) {
+						console.log("area", json);
+					}, 1);
+				mtypes.positionfirst(function(json) {
+						console.log("positionfirst", json);
+					});
+				mtypes.positionsecond(function(json) {
+						console.log("positionsecond", json);
+					}, 1);
+				mtypes.positionthird(function(json) {
+						console.log("positionthird", json);
+					}, 1);
+			});
+		</script>
+		
+	</body>
+</html>
