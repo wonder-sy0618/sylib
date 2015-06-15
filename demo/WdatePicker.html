@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	</head>
+	<body>
+		
+		<script src="../sylib.js" type="text/javascript" charset="utf-8"></script>
+		
+		<input id="date_input_demo1" type="text" />
+		<br/><br/>
+		<script>
+			seajs.use(['jquery/jquery', 'my97/My97DatePicker'], function($, WdatePicker) {
+				$("#date_input_demo1").click(function() {
+					WdatePicker({
+						el : this,
+						dateFmt : 'yyyy-MM-dd HH:mm:ss'
+					});
+					return false;
+				});
+			});
+		</script>
+		
+		<br/><br/>
+		
+		
+		<input id="date_input_demo2_s" type="text" /> - <input id="date_input_demo2_e" type="text" />
+		<br/><br/>
+		<script>
+			seajs.use(['jquery/jquery', 'my97/My97DatePicker'], function($, WdatePicker) {
+				$("#date_input_demo2_s").click(function() {
+					WdatePicker({
+						maxDate : '#F{$dp.$D(\'date_input_demo2_e\')}'
+					});
+					return false;
+				});
+				$("#date_input_demo2_e").click(function() {
+					WdatePicker({
+						minDate : '#F{$dp.$D(\'date_input_demo2_s\')}'
+					});
+					return false;
+				});
+			});
+		</script>
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>
+
+
+
+
+
+
+
+

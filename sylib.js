@@ -135,7 +135,8 @@ seajs.config({
 		'gwjjeff/cryptojs': 		'gwjjeff/cryptojs/cryptojs.js',
 		'apache/amq': 		'apache/amq/amq.js',
 		'padolsey/grayscale': 		'padolsey/grayscale.js',
-		'cloudhead/store': 		'cloudhead/store.js'
+		'cloudhead/store': 		'cloudhead/store.js',
+		'my97/My97DatePicker': 		'my97/My97DatePicker/WdatePicker.js'
 	},
 	paths : {
 		'jquery' : 	cdnbase+'lib/jquery',
@@ -148,6 +149,7 @@ seajs.config({
 		'douglascrockford': cdnbase+'lib/douglascrockford',
 		'gwjjeff': 	cdnbase+'lib/gwjjeff',
 		'apache': 		cdnbase+'lib/apache',
-		'cloudhead':	cdnbase+'lib/cloudhead'
+		'cloudhead':	cdnbase+'lib/cloudhead',
+		'my97':	cdnbase+'lib/my97'
 	}
 });
