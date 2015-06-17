@@ -1,0 +1,65 @@
+<div class="fenye fpageutil" page_index="<%=page_index %>" >
+	<div class="black2 black1 fl">
+		<span>每页显示条数：</span>
+		<% for (var i=0; i<page_size_opt.length; i++) { %>
+			<% if (page_size_opt[i] == page_size) { %>
+				<span class="current"><%=page_size_opt[i] %>条</span>
+			<% } else { %>
+				<a href="javascript:void(0);" class="page_size" page_size="<%=page_size_opt[i] %>" ><%=page_size_opt[i] %>条</a>
+			<% } %>
+		<% } %>
+	</div>
+	<div class="black2 fr">
+		<% if (page_index <= 1) { %>
+			<span class="disabled" ><</span>
+		<% } else { %>
+			<a href="javascript:void(0);" class="page_last" ><</a>
+		<% } %>
+		<% for (var i=1; 
+					i<=(page_index_size_edge < page_count ? page_index_size_edge : page_count); 
+					i++) { %>
+			<% if (i == page_index) { %>
+				<span class="current" ><%=i %></span>
+			<% } else { %>
+				<a href="javascript:void(0);" class="page_index" page_index="<%=i %>" ><%=i %></a>
+			<% } %>
+		<% } %>
+		<% if ( (page_count > page_index_size_edge*2 && page_index > page_index_size_mid_edge + page_index_size_edge + 1) 
+					|| (page_index < page_index_size_edge && page_count > page_index_size_edge*2) ) { %>
+		...
+		<% } %>
+		<% if ( page_index > page_index_size_edge ) { %>
+			<% for (var i=(page_index < page_count - page_index_size_edge + 1
+								?  (page_index-page_index_size_mid_edge > page_index_size_edge ? page_index-page_index_size_mid_edge : page_index_size_edge + 1) 
+								:  (page_count - page_index_size_edge + 1)  ); 
+						i<=(page_index+page_index_size_mid_edge < page_count ? page_index+page_index_size_mid_edge : page_count); 
+						i++) { %>
+				<% if (i == page_index) { %>
+					<span class="current" ><%=i %></span>
+				<% } else { %>
+					<a href="javascript:void(0);" class="page_index" page_index="<%=i %>" ><%=i %></a>
+				<% } %>
+			<% } %>
+		<% } %>
+		<% if (  page_index >= page_index_size_edge 
+					&& ( page_count > page_index_size_edge*2 && page_index < (page_count - page_index_size_edge) ) 
+					&& ( page_index < (page_count - page_index_size_mid_edge - page_index_size_edge) ) ) { %>
+		...
+		<% } %>
+		<% for (var i=(page_count - page_index_size_edge > page_index+page_index_size_mid_edge ? page_count - page_index_size_edge : page_index+page_index_size_mid_edge) + 1; 
+					i<=(page_count); 
+					i++) { %>
+			<% if (i == page_index) { %>
+				<span class="current" ><%=i %></span>
+			<% } else { %>
+				<a href="javascript:void(0);" class="page_index" page_index="<%=i %>" ><%=i %></a>
+			<% } %>
+		<% } %>
+		<% if (page_index >= page_count) { %>
+			<span class="disabled" >></span>
+		<% } else { %>
+			<a href="javascript:void(0);" class="page_next" >></a>
+		<% } %>
+	</div>
+	<div class="clear"></div>
+</div>

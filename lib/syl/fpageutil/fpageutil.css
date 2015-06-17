@@ -1,0 +1,100 @@
+
+
+.fpageutil .fl {
+	float: left;
+}
+.fpageutil .fr {
+	float: right;
+}
+
+
+/*页码开始*/
+.fpageutil .fenye{ margin:auto; padding-top:0px;}
+.fpageutil .black1{ font-size:13px !important; }
+.fpageutil .blackqh{ font-size:13px !important; text-align:left !important;  margin-top:0px !important;}
+.fpageutil div.blackqh a { background-color:#faebdd !important;
+	
+	padding-right: 5px;
+	
+	padding-left: 5px;
+	padding-bottom: 2px;
+	margin: 0px;
+	
+	color: #403d44;
+	padding-top: 2px;
+	border: #fed6b0 1px solid !important;
+	text-decoration: none
+}
+.fpageutil div.blackqh  a:hover {
+
+	color: #eb7608 !important;
+	border: #f07a0e 1px solid;
+	background-color: #fa8113;
+}
+
+.fpageutil div.black2 {
+	padding-right: 0px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	margin: 3px 0px;
+	padding-top: 7px;
+	text-align: right; font-size:14px; margin-top:20px;
+}
+.fpageutil div.black2 a { background-color:#ffffff;
+	
+	padding-right: 5px;
+	
+	padding-left: 5px;
+	padding-bottom: 2px;
+	margin: 2px;
+	
+	color: #403d44;
+	padding-top: 2px;
+	border: #cdcdce 1px solid;
+	text-decoration: none
+}
+.fpageutil div.black2 a:hover {
+
+	color: #fff;
+	border: #f07a0e 1px solid;
+	background-color: #fa8113;
+}
+.fpageutil div.black2 a:active {
+	border-right: #403d44 1px solid;
+	border-top: #403d44 1px solid;
+	border-left: #403d44 1px solid;
+	color: #fff;
+	border-bottom: #403d44 1px solid;
+	background-color: #403d44;
+}
+.fpageutil div.black2 span.current {
+	
+	padding-right: 5px;
+	
+	padding-left: 5px;
+	font-weight: bold;
+	padding-bottom: 2px;
+	margin: 2px;
+	border: #f07a0e 1px solid;
+	
+	color: #fff;
+	padding-top: 2px;
+	
+	background-color: #fa8113;
+}
+.fpageutil div.black2 span.disabled {
+	border: #dddddd 1px solid;
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-bottom: 2px;
+	margin: 2px;
+	color: #d0d0d0;
+	padding-top: 2px;
+}
+
+/*页码结束*/
+
+
+
+
+

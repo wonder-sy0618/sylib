@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	</head>
+	<body >
+	
+		<div class="pageutils" >
+		
+		</div>
+        
+		
+		<script src="../sylib.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			
+			seajs.use(['jquery/jquery', 'syl/fpageutil', 'syl/utils/utils'], 
+			function($, fpageutil, utils) {
+				for (var i=1; i<=20; i++) {
+					$(".pageutils").append('<div class="pageutil_'+i+'" style="height: 100px;" />');
+					(function(i) {
+						window.setTimeout(function() {
+							fpageutil.init({
+								element : '.pageutil_' + i,
+								page_index : i,
+								page_count : 20,
+								onstatechange : function(page, pagesize) {
+									console.log(page, pagesize);
+								}
+							});
+						}, 100 * i);
+					})(i);
+				}
+				// 计算页码长度
+				console.log(fpageutil.pagecel(101, 10));
+			});
+            
+		</script>
+		
+	</body>
+</html>
