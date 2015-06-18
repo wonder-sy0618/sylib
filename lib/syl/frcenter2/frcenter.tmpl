@@ -5,20 +5,20 @@
        <div class="topdbn">
             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tabb_top">
               <tr>
-                <td class="logo"><img src="{{path_logo }}" /></td>
+                <td class="logo"><img src="<%=path_logo %>" /></td>
                 <td align="right" valign="bottom">
-					<p style="padding-bottom:2px; padding-right:10px;">欢迎您！<span class="red">{{val_loginuser }}</span></p>
+					<p style="padding-bottom:2px; padding-right:10px;">欢迎您！<span class="red"><%=val_loginuser %></span></p>
 				</td>
                 <td width="140" align="center" style="padding-right:10px;">
 					<!-- 导航菜单 -->
-					{{each data_menus.navbarmenu as m index_m}}
+					<% for (var index_m=0; index_m<data_menus.navbarmenu.length; index_m++) { var m = data_menus.navbarmenu[index_m]; %>
                     <div class="margnl fr">
-                        <a href="{{m.linkurl }}">
-							<img src="{{path_resbase }}{{m.icon }}"  height="28" class="tuichu" />
-                        <p>{{m.name }}</p>
+                        <a href="<%=data_menus.navbarmenu[index_m].linkurl %>" >
+							<img src="<%=path_resbase %><%=data_menus.navbarmenu[index_m].icon %>"  height="28" class="tuichu" />
+                        <p><%=data_menus.navbarmenu[index_m].name %></p>
                         </a>
                     </div>
-					{{/each}}   <!-- /导航菜单 -->
+					<% } %> <!-- /导航菜单 -->
                 </td>
               </tr>
             </table>
@@ -30,20 +30,20 @@
         <div class="daohangn">
             <div class="dhl fl">
                 <ul>
-					{{each data_menus.menus as menu1 index_menu1}}
-                    <li  class="" index_menu1="{{index_menu1}}" >
-                        <a href="{{menu1.linkurl }}" clientevent="{{menu1.clientevent }}" class="menuitem menu1" >
+					<% for (var index_menu1=0; index_menu1<data_menus.menus.length; index_menu1++) { var menu1 = data_menus.menus[index_menu1]; %>
+                    <li  class="" index_menu1="<%=index_menu1 %>" >
+                        <a href="<%=menu1.linkurl %>" clientevent="<%=menu1.clientevent %>" class="menuitem menu1" >
 							<table border="0" cellspacing="0" cellpadding="0" class="dhtab">
                               <tr>
                                 <td class="tdlf">&nbsp;</td>
-                                <td class="tdmid">{{menu1.name }}</td>
+                                <td class="tdmid"><%=menu1.name %></td>
                                 <td class="tdrg">&nbsp;</td>
                               </tr>
                             </table>
                          </a>
 
                     </li>
-					{{/each}}
+					<% } %>
                 </ul>
                 
             </div>
@@ -59,18 +59,6 @@
 					<div class="searlb frcenter_search_result" style="display:none;" >
 						<div class="searlbn" >
 							<ul>
-								<li>简历分类简历分类简历分类简历分类简历分类简历分类简历分类简历分类</li>
-								<li>简历分类简历分类</li>
-								<li>简历分类简历分类</li>
-								<li>简历分类简历分类</li>
-								<li>简历分类简历分类</li>
-								<li>简历分类简历分类</li>
-								<li>简历分类简历分类</li>
-								<li>简历分类简历分类</li>
-								<li>简历分类简历分类</li>
-								<li>简历分类简历分类</li>
-								<li>简历分类简历分类</li>
-								<li>简历分类简历分类</li>
 							</ul>
                         </div>
                     </div>
@@ -89,34 +77,34 @@
 <!--左边菜单开始-->
 <div class="panel left">
 	
-	{{each data_menus.menus as menu1 index_menu1}}
-    <div class="lfcon menu1group menu1group_{{index_menu1 }}" style="display:none;" index_menu1="{{index_menu1}}" >
+	<% for (var index_menu1=0; index_menu1<data_menus.menus.length; index_menu1++) { var menu1 = data_menus.menus[index_menu1]; %>
+    <div class="lfcon menu1group menu1group_<%=index_menu1 %>" style="display:none;" index_menu1="<%=index_menu1 %>" >
         <div class="left_menu">
             <dl>
-				{{each menu1.menus as menu2 index_menu2}}
-                <dd class="ddhover {{if pageurl==menu2.linkurl}}lihover menuaction{{/if}}">
-                    <a class="h1a menuitem menu2 {{menu2.class }}" 
-					{{if !menu2.menus || menu2.menus.length <= 0}}href="{{menu2.linkurl }}"{{/if}} >
-						<h1>{{menu2.name }}</h1>
+				<% for (var index_menu2=0; index_menu2<menu1.menus.length; index_menu2++) { var menu2 = menu1.menus[index_menu2]; %>
+                <dd class="ddhover <% if (pageurl==menu2.linkurl || (menu2.match && regexMatch(pageurl, menu2.match)) ) { %>lihover menuaction<% } %>">
+                    <a class="h1a menuitem menu2 <%=menu2.class %>"  match="<%=menu2.match %>"
+					<% if (!menu2.menus || menu2.menus.length <= 0) { %>href="<%=menu2.linkurl %>"<% } %> >
+						<h1><%=menu2.name %></h1>
 					</a>
-					{{if menu2.menus && menu2.menus.length > 0}}
+					<% if (menu2.menus && menu2.menus.length > 0) { %>
                     <ul>
-						{{each menu2.menus as menu3 index_menu3}}
-                        <li class="{{if pageurl==menu3.linkurl}}lihover menuaction{{/if}}" >
-							<a href="{{menu3.linkurl }}" clientevent="{{menu3.clientevent }}" class="menuitem menu3"  >
-								<p class="lin" >{{menu3.name }}</p>
+						<% for (var index_menu3=0; index_menu3<menu2.menus.length; index_menu3++) { var menu3 = menu2.menus[index_menu3]; %>
+                        <li class="<% if (pageurl==menu3.linkurl || (menu3.match && regexMatch(pageurl, menu3.match)) ) { %>lihover menuaction<% } %>" >
+							<a href="<%=menu3.linkurl %>" clientevent="<%=menu3.clientevent %>" class="menuitem menu3" match="<%=menu3.match %>" >
+								<p class="lin" ><%=menu3.name %></p>
 							</a>
 						</li>
-						{{/each}}
+						<% } %>
                     </ul>
-                    {{/if}}
+                    <% } %>
                 </dd>
-				{{/each}}
+				<% } %>
             </dl>
         </div>
         <div class="clear"></div>
     </div>    
-	{{/each}}
+	<% } %>
         
 </div>
 
@@ -126,7 +114,7 @@
 <!--右边主页面-->
 <div class="panel main">
     <div class="mainnr">
-        <div class="d_position"><img src="{{path_resbase }}images/wizhi.png"/>当前位置：<span class="frcenter_local" ><span class="yellow">简历管理</span> / <span class="yellow">简历管理</span></span></div>
+        <div class="d_position"><img src="<%=path_resbase %>images/wizhi.png"/>当前位置：<span class="frcenter_local" ><span class="yellow">简历管理</span> / <span class="yellow">简历管理</span></span></div>
         <div class="mainnrbj frcenter_main">
 			
 			

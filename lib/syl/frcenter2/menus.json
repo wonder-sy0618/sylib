@@ -14,7 +14,8 @@
 				"linkurl" : "#"
 			}, {
 				"name" : "服务大厅",
-				"linkurl" : "#"
+				"linkurl" : "#",
+				"match" : "demo/*"
 			}, {
 				"name" : "网上服务",
 				"linkurl" : "#"
