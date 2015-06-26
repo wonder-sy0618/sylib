@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	</head>
+	<body>
+		
+		<script src="../sylib.js" type="text/javascript" charset="utf-8"></script>
+		
+		<div class="sel_area" >
+			<select class="sel_item_prov" ></select>
+			<select class="sel_item_city" ></select>
+			<select class="sel_item_area" ></select>
+		</div>
+		
+		<script>
+			seajs.use(['jquery/jquery', 'syl/mtypes/area', 'syl/utils'], function($, area, utils) {
+				area.getMtypesApi().setup({
+					apibaseurl : utils.getCdnBasePath() + 'lib/syl/mtypes/json/',
+					apis : {
+						"language"	: "language.json",
+						"industry"	: "industry.json",
+						"company"	: "company.json",
+						"province"	: "province.json",
+						"city"	: "city.json",
+						"area"	: "area.json",
+						"positionfirst"	: "positionfirst.json",
+						"positionsecond"	: "positionsecond.json",
+						"positionthird"	: "positionthird.json"
+					}
+					// apibaseurl : 'http://192.168.0.220:8780/mtypes/'
+				});
+				area.init({
+					init_prov : '北京市',
+					init_city : '北京',
+					init_area : '海淀区'
+				});
+			});
+		</script>
+		
+	</body>
+</html>
