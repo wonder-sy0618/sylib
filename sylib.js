@@ -113,7 +113,7 @@ seajs.config({
 		'jquery/showLoading' : 	'jquery/showLoading/js/jquery.showLoading.js',
 		'art/template' : 	'art/template.js',
 		'art/template-native' : 	'art/template-native.js',
-		'art/artdialog' : 	'art/artdialog/src/dialog-plus.js',
+		'art/artdialog' : 	'art/dialog.js',
 		'moment/moment': 	'moment/moment/moment.js',
 		'syl/utils': 		'syl/utils/utils.js',
 		'syl/utils/uuid': 		'syl/utils/uuid.js',

@@ -22,7 +22,9 @@
 					//	imgarray : [basepath+'storage/2015/06/16/125726979_5117.jpg?action=cut&mode=cut_area&height=110&width=110&positions=center'],
 						imagearray_change : function(imgarray) {
 							console.log("图片上传结束", imgarray);
-						}
+						},
+						maxFileNum : 3,
+						reviseFileNum : 0
 					});
 				}, 'http://123.139.154.172/fileserver/fileServerUploadToken.jsp');
 			});
