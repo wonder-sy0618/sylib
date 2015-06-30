@@ -3,6 +3,7 @@
 "moment",
 "template",
 "json",
+"qrcode",
 "ueditor",
 "easyui",
 "cookie",
