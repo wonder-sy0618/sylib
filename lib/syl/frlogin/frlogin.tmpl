@@ -110,7 +110,7 @@
                         </tr>
                         <tr>
 							<td style="padding-top: 8px; 
-								{{if notice_message || notice_message == '' }}display:none;{{/if}} " 
+								{{if !notice_message || notice_message == '' }}display:none;{{/if}} " 
 								class="tishi notice">
 									{{notice_message }}
 							</td>
