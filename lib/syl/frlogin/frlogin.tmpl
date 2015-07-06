@@ -109,7 +109,11 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="padding-top: 8px; display:none;" class="tishi notice">请输入用户名</td>
+							<td style="padding-top: 8px; 
+								{{if notice_message || notice_message == '' }}display:none;{{/if}} " 
+								class="tishi notice">
+									{{notice_message }}
+							</td>
                         </tr>
                     </table>
 
