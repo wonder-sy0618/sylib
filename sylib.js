@@ -112,6 +112,7 @@ seajs.config({
 		'jquery/form' : 	'jquery/form/jquery.form.js',
 		'jquery/validate' : 	'jquery/validate/jquery.validate.js', 
 		'jquery/metadata' : 	'jquery/metadata/jquery.metadata.js',
+		'jquery/inputbox' : 	'jquery/inputbox/jquery.inputbox.js',
 		'jquery/qrcode' : 	'jquery/qrcode/jquery.qrcode.js',
 		'jquery/showLoading' : 	'jquery/showLoading/js/jquery.showLoading.js',
 		'art/template' : 	'art/template.js',
