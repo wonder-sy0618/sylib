@@ -105,8 +105,8 @@ var cdnbase = window.syl.utils.getCdnBasePath();
 seajs.config({
 	base : window.syl.utils.getPageBasePath(),
 	alias: {
-		'jquery' : 			'jquery/jquery/1.10.1/jquery-debug.js',
-		'jquery/jquery' : 	'jquery/jquery/1.10.1/jquery-debug.js',
+		'jquery' : 			'jquery/jquery/1.11.3/jquery-debug.js',
+		'jquery/jquery' : 	'jquery/jquery/1.11.3/jquery-debug.js',
 		'jquery/easyui' : 	'jquery/easyui/jquery.easyui.min.js',
 		'jquery/cookie' : 	'jquery/cookie/jquery.cookie.js',
 		'jquery/form' : 	'jquery/form/jquery.form.js',
