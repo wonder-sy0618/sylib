@@ -1,0 +1,40 @@
+
+
+/* ------------ */
+.sylib_cropper_webuploader .wrapper {
+    width: 980px;
+    margin: 0 auto;
+
+    margin: 1em;
+    width: auto;
+}
+
+.sylib_cropper_webuploader .img-preview {
+    width: 160px;
+    height: 90px;
+    margin-top: 1em;
+    border: 1px solid #ccc;
+}
+
+.sylib_cropper_webuploader .cropper-wraper {
+    position: relative;
+}
+
+.sylib_cropper_webuploader .upload-btn {
+    background: #ffffff;
+    border: 1px solid #cfcfcf;
+    color: #565656;
+    padding: 10px 18px;
+    display: inline-block;
+    border-radius: 3px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 14px;
+
+    position: absolute;
+    right: 1em;
+    bottom: 2em;
+}
+.sylib_cropper_webuploader .upload-btn:hover {
+    background: #f0f0f0;
+}

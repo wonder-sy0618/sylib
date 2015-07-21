@@ -115,6 +115,8 @@ seajs.config({
 		'jquery/inputbox' : 	'jquery/inputbox/jquery.inputbox.js',
 		'jquery/qrcode' : 	'jquery/qrcode/jquery.qrcode.js',
 		'jquery/showLoading' : 	'jquery/showLoading/js/jquery.showLoading.js',
+		'jquery/cropper' : 	'jquery/cropper/cropper.js',
+		'jquery/cropper/webuploader' : 	'jquery/cropper/webuploader/webuploader.js',
 		'art/template' : 	'art/template.js',
 		'art/template-native' : 	'art/template-native.js',
 		'art/artdialog' : 	'art/dialog.js',
