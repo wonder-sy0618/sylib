@@ -30,5 +30,29 @@
 			});
 		</script>
 		
+		
+		
+		
+		
+		
+		<button class="btn_upload" style="margin:30px;" >使用对话框上传</button>
+		<script src="../sylib.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			seajs.use(['jquery/jquery', 'syl/dialog/imgupload'], function($, imgupload) {
+				$(".btn_upload").click(function() {
+					imgupload.showImageUploadDialog({
+						urlFileServer : 'http://123.139.154.172/fileserver/fileServerUploadToken.jsp',
+						imagearray_change : function(arr) {
+							console.log("image change", arr);
+						},
+						onclose : function() {
+							console.log("close");
+						},
+						maxFileNum : 1
+					});
+				});
+			});
+		</script>
+		
 	</body>
 </html>
