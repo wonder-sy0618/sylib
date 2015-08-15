@@ -1,85 +1,17 @@
 /* ----------------Reset Css--------------------- */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video, input  {
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
 
-html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
-    -webkit-text-size-adjust: none;
-}
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-
-body {
-    font-family: arial, sans-serif;
-}
-
-ol, ul {
-    list-style: none;
-}
-
-blockquote, q {
-    quotes: none;
-}
-
-blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none;
-}
-
-ins {
-    text-decoration: none;
-}
-
-del {
-    text-decoration: line-through;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-/* ------------ */
-#wrapper {
-    width: 980px;
-    margin: 0 auto;
-
-    margin: 1em;
-    width: auto;
-}
-
-#container {
-    border: 1px solid #dadada;
-    color: #838383;
-    font-size: 12px;
-    margin-top: 10px;
-    background-color: #FFF;
-}
-
-.uploader .queueList {
+.syl_imageupload .queueList {
     margin: 20px;
 }
 
-.element-invisible {
+.syl_imageupload .element-invisible {
     position: absolute !important;
     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
     clip: rect(1px,1px,1px,1px);
 }
 
-.uploader .placeholder {
+.syl_imageupload .placeholder {
     border: 3px dashed #e6e6e6;
     min-height: 238px;
     padding-top: 158px;
@@ -90,7 +22,7 @@ table {
     position: relative;
 }
 
-.uploader .placeholder .webuploader-pick {
+.syl_imageupload .placeholder .webuploader-pick {
     font-size: 18px;
     background: #00b7ee;
     border-radius: 3px;
@@ -103,11 +35,11 @@ table {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
-.uploader .placeholder .webuploader-pick-hover {
+.syl_imageupload .placeholder .webuploader-pick-hover {
     background: #00a2d4;
 }
 
-.uploader .placeholder .flashTip {
+.syl_imageupload .placeholder .flashTip {
     color: #666666;
     font-size: 12px;
     position: absolute;
@@ -115,29 +47,29 @@ table {
     text-align: center;
     bottom: 20px;
 }
-.uploader .placeholder .flashTip a {
+.syl_imageupload .placeholder .flashTip a {
     color: #0785d1;
     text-decoration: none;
 }
-.uploader .placeholder .flashTip a:hover {
+.syl_imageupload .placeholder .flashTip a:hover {
     text-decoration: underline;
 }
 
-.uploader .placeholder.webuploader-dnd-over {
+.syl_imageupload .placeholder.webuploader-dnd-over {
     border-color: #999999;
 }
 
-.uploader .placeholder.webuploader-dnd-over.webuploader-dnd-denied {
+.syl_imageupload .placeholder.webuploader-dnd-over.webuploader-dnd-denied {
     border-color: red;
 }
 
-.uploader .filelist {
+.syl_imageupload .filelist {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.uploader .filelist:after {
+.syl_imageupload .filelist:after {
     content: '';
     display: block;
     width: 0;
@@ -146,7 +78,7 @@ table {
     clear: both;
 }
 
-.uploader .filelist li {
+.syl_imageupload .filelist li {
     width: 110px;
     height: 110px;
     background: url(./bg.png) no-repeat;
@@ -159,12 +91,12 @@ table {
     font-size: 12px;
 }
 
-.uploader .filelist li p.log {
+.syl_imageupload .filelist li p.log {
     position: relative;
     top: -45px;
 }
 
-.uploader .filelist li p.title {
+.syl_imageupload .filelist li p.title {
     position: absolute;
     top: 0;
     left: 0;
@@ -177,7 +109,7 @@ table {
     text-align: left;
 }
 
-.uploader .filelist li p.progress {
+.syl_imageupload .filelist li p.progress {
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -186,7 +118,7 @@ table {
     overflow: hidden;
     z-index: 50;
 }
-.uploader .filelist li p.progress span {
+.syl_imageupload .filelist li p.progress span {
     display: none;
     overflow: hidden;
     width: 0;
@@ -233,7 +165,7 @@ table {
     }
 }
 
-.uploader .filelist li p.imgWrap {
+.syl_imageupload .filelist li p.imgWrap {
     position: relative;
     z-index: 2;
     line-height: 110px;
@@ -255,11 +187,11 @@ table {
     transition: 200ms ease-out;
 }
 
-.uploader .filelist li img {
+.syl_imageupload .filelist li img {
     width: 100%;
 }
 
-.uploader .filelist li p.error {
+.syl_imageupload .filelist li p.error {
     background: #f43838;
     color: #fff;
     position: absolute;
@@ -271,7 +203,7 @@ table {
     z-index: 100;
 }
 
-.uploader .filelist li .success {
+.syl_imageupload .filelist li .success {
     display: block;
     position: absolute;
     left: 0;
@@ -282,7 +214,7 @@ table {
     background: url(./success.png) no-repeat right bottom;
 }
 
-.uploader .filelist div.file-panel {
+.syl_imageupload .filelist div.file-panel {
     position: absolute;
     height: 0;
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80000000', endColorstr='#80000000')\0;
@@ -294,7 +226,7 @@ table {
     z-index: 300;
 }
 
-.uploader .filelist div.file-panel span {
+.syl_imageupload .filelist div.file-panel span {
     width: 24px;
     height: 24px;
     display: inline;
@@ -306,28 +238,28 @@ table {
     cursor: pointer;
 }
 
-.uploader .filelist div.file-panel span.rotateLeft {
+.syl_imageupload .filelist div.file-panel span.rotateLeft {
     background-position: 0 -24px;
 }
-.uploader .filelist div.file-panel span.rotateLeft:hover {
+.syl_imageupload .filelist div.file-panel span.rotateLeft:hover {
     background-position: 0 0;
 }
 
-.uploader .filelist div.file-panel span.rotateRight {
+.syl_imageupload .filelist div.file-panel span.rotateRight {
     background-position: -24px -24px;
 }
-.uploader .filelist div.file-panel span.rotateRight:hover {
+.syl_imageupload .filelist div.file-panel span.rotateRight:hover {
     background-position: -24px 0;
 }
 
-.uploader .filelist div.file-panel span.cancel {
+.syl_imageupload .filelist div.file-panel span.cancel {
     background-position: -48px -24px;
 }
-.uploader .filelist div.file-panel span.cancel:hover {
+.syl_imageupload .filelist div.file-panel span.cancel:hover {
     background-position: -48px 0;
 }
 
-.uploader .statusBar {
+.syl_imageupload .statusBar {
     height: 63px;
     border-top: 1px solid #dadada;
     padding: 0 20px;
@@ -336,7 +268,7 @@ table {
     position: relative;
 }
 
-.uploader .statusBar .progress {
+.syl_imageupload .statusBar .progress {
     border: 1px solid #1483d8;
     width: 198px;
     background: #fff;
@@ -349,7 +281,7 @@ table {
     position: relative;
     margin-right: 10px;
 }
-.uploader .statusBar .progress span.percentage {
+.syl_imageupload .statusBar .progress span.percentage {
     width: 0;
     height: 100%;
     left: 0;
@@ -357,33 +289,33 @@ table {
     background: #1483d8;
     position: absolute;
 }
-.uploader .statusBar .progress span.text {
+.syl_imageupload .statusBar .progress span.text {
     position: relative;
     z-index: 10;
 }
 
-.uploader .statusBar .info {
+.syl_imageupload .statusBar .info {
     display: inline-block;
     font-size: 14px;
     color: #666666;
 }
 
-.uploader .statusBar .btns {
+.syl_imageupload .statusBar .btns {
     position: absolute;
     top: 10px;
     right: 20px;
     line-height: 40px;
 }
 
-.filePicker2 {
+.syl_imageupload .filePicker2 {
     display: inline-block;
     float: left;
 }
 
-.uploader .statusBar .btns .webuploader-pick,
-.uploader .statusBar .btns .uploadBtn,
-.uploader .statusBar .btns .uploadBtn.state-uploading,
-.uploader .statusBar .btns .uploadBtn.state-paused {
+.syl_imageupload .statusBar .btns .webuploader-pick,
+.syl_imageupload .statusBar .btns .uploadBtn,
+.syl_imageupload .statusBar .btns .uploadBtn.state-uploading,
+.syl_imageupload .statusBar .btns .uploadBtn.state-paused {
     background: #ffffff;
     border: 1px solid #cfcfcf;
     color: #565656;
@@ -395,23 +327,23 @@ table {
     font-size: 14px;
     float: left;
 }
-.uploader .statusBar .btns .webuploader-pick-hover,
-.uploader .statusBar .btns .uploadBtn:hover,
-.uploader .statusBar .btns .uploadBtn.state-uploading:hover,
-.uploader .statusBar .btns .uploadBtn.state-paused:hover {
+.syl_imageupload .statusBar .btns .webuploader-pick-hover,
+.syl_imageupload .statusBar .btns .uploadBtn:hover,
+.syl_imageupload .statusBar .btns .uploadBtn.state-uploading:hover,
+.syl_imageupload .statusBar .btns .uploadBtn.state-paused:hover {
     background: #f0f0f0;
 }
 
-.uploader .statusBar .btns .uploadBtn {
+.syl_imageupload .statusBar .btns .uploadBtn {
     background: #00b7ee;
     color: #fff;
     border-color: transparent;
 }
-.uploader .statusBar .btns .uploadBtn:hover {
+.syl_imageupload .statusBar .btns .uploadBtn:hover {
     background: #00a2d4;
 }
 
-.uploader .statusBar .btns .uploadBtn.disabled {
+.syl_imageupload .statusBar .btns .uploadBtn.disabled {
     pointer-events: none;
     opacity: 0.6;
 }
