@@ -1090,6 +1090,7 @@ seajs.config({
 		'jquery/cropper' : 	'jquery/cropper/cropper.js',
 		'jquery/cropper/webuploader' : 	'jquery/cropper/webuploader/webuploader.js',
 		'jquery/slider' : 	'jquery/slider/slider.js',
+		'jquery/ztree' : 	'jquery/ztree/js/jquery.ztree.js',
 		'art/template' : 	'art/template.js',
 		'art/template-native' : 	'art/template-native.js',
 		'art/artdialog' : 	'art/dialog.js',
