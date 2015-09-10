@@ -1,0 +1,28 @@
+{
+	"res_id" : "r00001",
+    "items" : [{
+        "itemId" : "i001",
+        "title" : "标题1",
+		"titleImageUrl" : "201110321224709.jpg",
+		"itemDescription" : "这里是内容详情",
+		"itemContent" : null,
+		"originalUrl" : null,
+		"addTime" : null
+    }, {
+        "itemId" : "i002",
+        "title" : "标题1",
+		"titleImageUrl" : "x9i-1010004.jpg",
+		"itemDescription" : null,
+		"itemContent" : null,
+		"originalUrl" : null,
+		"addTime" : null
+    }, {
+        "itemId" : "i003",
+        "title" : "标题1",
+		"titleImageUrl" : "201110321224709.jpg",
+		"itemDescription" : null,
+		"itemContent" : null,
+		"originalUrl" : null,
+		"addTime" : null
+    }]
+}
