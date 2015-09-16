@@ -1117,6 +1117,7 @@ seajs.config({
 		'baidu/WebUpoaderLoader/imageupload': 	'baidu/webuploader/imageupload/imageupload.js',
 		'bootstrap/bootstrap': 		'bootstrap/bootstrap/js/bootstrap.min.js',
 		'bootstrap/treeview': 		'bootstrap/treeview/bootstrap-treeview.min.js',
+		'bootstrap/multiselect': 		'bootstrap/multiselect/bootstrap-multiselect.js',
 		'douglascrockford/json': 	'douglascrockford/json/json.js',
 		'gwjjeff/cryptojs': 		'gwjjeff/cryptojs/cryptojs.js',
 		'apache/amq': 		'apache/amq/amq.js',
