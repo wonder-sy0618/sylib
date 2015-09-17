@@ -11,9 +11,12 @@
 		
 		<script src="../sylib.js" type="text/javascript" charset="utf-8"></script>
 		<script>
-			seajs.use(['jquery/jquery', 'jquery/cropperbox'], function($, cropperbox) {
-				console.log($, cropperbox);
-				cropperbox.init({
+			seajs.use(['jquery/jquery', 'jquery/cropper/cropperbox', 'jquery/cropper/webuploader'], function($, cropperbox, webuploader) {
+				console.log($, cropperbox, webuploader);
+			//	cropperbox.init({
+			//		target : "#cropperbox_demo"
+			//	});
+				webuploader.init({
 					target : "#cropperbox_demo"
 				});
 			});

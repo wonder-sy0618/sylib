@@ -1089,6 +1089,7 @@ seajs.config({
 		'jquery/showLoading' : 	'jquery/showLoading/js/jquery.showLoading.js',
 		'jquery/cropper' : 	'jquery/cropper/cropper.js',
 		'jquery/cropper/webuploader' : 	'jquery/cropper/webuploader/webuploader.js',
+		'jquery/cropper/cropperbox' : 	'jquery/cropper/cropperbox/cropperbox.js',
 		'jquery/slider' : 	'jquery/slider/slider.js',
 		'jquery/ztree' : 	'jquery/ztree/js/jquery.ztree.js',
 		'art/template' : 	'art/template.js',
