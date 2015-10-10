@@ -107,7 +107,7 @@
 		
 		
 		
-		<button class="btn_upload" style="margin:30px;" >使用对话框上传</button>
+		<button class="btn_upload" style="margin:30px;" type="button" >使用对话框上传</button>
 		<script src="../sylib.js" type="text/javascript" charset="utf-8"></script>
 		<script>
 			seajs.use(['jquery/jquery', 'syl/dialog/imgupload'], function($, imgupload) {
@@ -125,6 +125,49 @@
 				});
 			});
 		</script>
+		
+		
+		
+		
+		<button class="btn_upload_base64" style="margin:30px;" type="button" >使用BASE64上传</button>
+		<img src="" width="200" class="proview" style="display:none;" />
+		<script src="../sylib.js" type="text/javascript" charset="utf-8"></script>
+
+		<script>
+			seajs.use(['jquery/jquery', 'syl/fileserver'], function($, fileserver) {
+				$(".btn_upload_base64").click(function() {
+					fileserver.upload_base64({
+						urlFileServer : 'http://123.139.154.172/fileserver/fileServerUploadToken.jsp',
+						onSelect : function(base64, file, reader) {
+							console.log("select", base64, file, reader);
+							return true;
+						},
+						onUpload : function(url, basepath) {
+							console.log("upload", url, basepath);
+							$(".proview").attr("src", basepath+url).show();
+						},
+						onError : function(state) {
+							console.log("error", state);
+						}
+					});
+					return false;
+				});
+			});
+		</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 	</body>
 </html>
