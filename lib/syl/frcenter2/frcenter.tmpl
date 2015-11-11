@@ -83,9 +83,9 @@
             <dl>
 				<% for (var index_menu2=0; index_menu2<menu1.menus.length; index_menu2++) { var menu2 = menu1.menus[index_menu2]; %>
                 <dd class="ddhover <% if (pageurl==menu2.linkurl || (menu2.match && regexMatch(pageurl, menu2.match)) ) { %>lihover menuaction<% } %>">
-                    <a class="h1a menuitem menu2 <%=menu2.class %>"  match="<%=menu2.match %>"
-					<% if (!menu2.menus || menu2.menus.length <= 0) { %>href="<%=menu2.linkurl %>"<% } %> >
-						<h1><%=menu2.name %></h1>
+                    <a class="h1a menuitem menu2 <%=menu2.cls %>"  match="<%=menu1.menus[index_menu2].match %>"
+					<% if (!menu1.menus[index_menu2].menus || menu1.menus[index_menu2].menus.length <= 0) { %>href="<%=menu1.menus[index_menu2].linkurl %>"<% } %> >
+						<h1><%=menu1.menus[index_menu2].name %></h1>
 					</a>
 					<% if (menu2.menus && menu2.menus.length > 0) { %>
                     <ul>
