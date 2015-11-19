@@ -158,6 +158,26 @@
 		
 		
 		
+		<br/>
+		<div class="area_imgupload" >
+		</div>
+		<script src="../sylib.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			seajs.use(['jquery/jquery', 'syl/fileserver/imgupload'], function($, imgupload) {
+				imgupload.init({
+					target : ".area_imgupload",
+					urlFileServer : 'http://123.139.154.172/fileserver/fileServerUploadToken.jsp',
+					images : ['http://192.168.0.220:8780/fileserver//storage/2015/11/16/174530946_9591.jpg'],
+					maxFileNum : 3
+				});
+			});
+		</script>
+		
+		
+		
+		
+		
+		
 		
 		
 		

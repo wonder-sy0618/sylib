@@ -1111,6 +1111,7 @@ seajs.config({
 		'syl/frlogin': 		'syl/frlogin/frlogin.js',
 		'syl/fpageutil': 		'syl/fpageutil/fpageutil.js',
 		'syl/fileserver': 		'syl/fileserver/fileserver.js',
+		'syl/fileserver/imgupload': 		'syl/fileserver/imgupload/imgupload.js',
 		'syl/wx/ui/preview': 		'syl/wx/ui/preview/preview.js',
 		'syl/dialog/imgupload': 		'syl/dialog/imgupload/imgupload.js',
 		'baidu/ueditor': 	'baidu/ueditor/ueditor.js',
