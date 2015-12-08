@@ -1094,7 +1094,8 @@ seajs.config({
 		'jquery/ztree' : 	'jquery/ztree/js/jquery.ztree.js',
 		'art/template' : 	'art/template.js',
 		'art/template-native' : 	'art/template-native.js',
-		'art/artdialog' : 	'art/dialog.js',
+		'art/dialog' : 	'art/dialog.js',
+		'art/topdialog' : 	'art/topdialog.js',
 		'moment/moment': 	'moment/moment/moment.js',
 		'syl/utils': 		'syl/utils/utils.js',
 		'syl/utils/uuid': 		'syl/utils/uuid.js',
@@ -1108,9 +1109,11 @@ seajs.config({
 		'syl/mtypes/area': 		'syl/mtypes/area.js',
 		'syl/frcenter': 		'syl/frcenter/frcenter.js',
 		'syl/frcenter2': 		'syl/frcenter2/frcenter.js',
+		'syl/frcenter3': 		'syl/frcenter3/frcenter.js',
 		'syl/frlogin': 		'syl/frlogin/frlogin.js',
 		'syl/fpageutil': 		'syl/fpageutil/fpageutil.js',
 		'syl/fileserver': 		'syl/fileserver/fileserver.js',
+		'syl/audionotify': 		'syl/audionotify/audionotify.js',
 		'syl/fileserver/imgupload': 		'syl/fileserver/imgupload/imgupload.js',
 		'syl/wx/ui/preview': 		'syl/wx/ui/preview/preview.js',
 		'syl/dialog/imgupload': 		'syl/dialog/imgupload/imgupload.js',
@@ -1139,6 +1142,7 @@ seajs.config({
 		'gwjjeff': 	cdnbase+'lib/gwjjeff',
 		'apache': 		cdnbase+'lib/apache',
 		'cloudhead':	cdnbase+'lib/cloudhead',
-		'my97':	cdnbase+'lib/my97'
+		'my97':	cdnbase+'lib/my97',
+		'audiojs':	cdnbase+'lib/audiojs'
 	}
 });

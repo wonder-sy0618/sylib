@@ -1,0 +1,57 @@
+
+<div class="panel panel-default syl_wx_ui_preview">
+	<style>
+		{{if data.items.length <= 1}}
+		{{target_selector}} .syl_wx_ui_preview .children_list {display:none;}
+		{{else}}
+		{{target_selector}} .syl_wx_ui_preview .single_item_element {display:none;}
+		{{/if}}
+	</style>
+	<div class="panel-body">
+		<div class="children_first news_item" itemId="{{data.items[0].itemId}}" >
+			<div class="main_title single_item_element v_title" >
+				{{data.items[0].title}}
+			</div>
+			<div class="main_timestamp single_item_element v_addTime" >
+				{{data.items[0].addTime | dateFormat:'MM月DD日'}}
+			</div>
+			<div class="children_content" >
+				<div class="image_box v_titleImageUrl" >
+					<img src="{{path_cdn_base}}{{data.items[0].titleImageUrl}}" style="display:none;" />
+				</div>
+				<div class="children_first_title v_title" >
+					{{data.items[0].title}}
+				</div>
+			</div>
+			<div class="children_first_description single_item_element" >
+				{{data.items[0].itemDescription}}
+			</div>
+		</div>
+		<div class="children_list" >
+			{{each data.items as item index}}
+				{{if index >= 1}}
+					<div class="panel panel-default children_item news_item" itemId="{{item.itemId}}" >
+						<div class="panel-body">
+							<div class="media">
+								<div class="media-right">
+									<a href="{{item.originalUrl}}" target="_black" >
+										<div class="image_box v_titleImageUrl" >
+											<img class="media-object" 
+											src="{{path_cdn_base}}{{item.titleImageUrl}}" >
+										</div>
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading v_title">
+										{{item.title}}
+									</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				{{/if}}
+			{{/each}}
+			
+		</div>
+	</div>
+</div>

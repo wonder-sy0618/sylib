@@ -21,6 +21,23 @@
 				html += '</p>';
 				document.getElementById("demo").innerHTML = html;
 			});
+			
+			seajs.use(['moment/moment'], function(moment) {
+				var now = moment();		// now
+				console.log(now);
+				//
+				var fmt = now.format("YYYY-MM-DD HH:mm:ss SSS");		// format
+				console.log(fmt);
+				//
+				var date = moment(fmt, "YYYY-MM-DD HH:mm:ss SSS").toDate();		// to js date object
+				console.log(date);
+				//
+				now.add(1, 'day');		//add, years/quarters/months/weeks/days/hours/minutes/seconds/milliseconds
+				console.log(now.format("YYYY-MM-DD HH:mm:ss SSS"));
+				//
+				now.add(-2, 'months');		//add, years/quarters/months/weeks/days/hours/minutes/seconds/milliseconds
+				console.log(now.format("YYYY-MM-DD HH:mm:ss SSS"));
+			});
 		</script>
 		
 	</body>

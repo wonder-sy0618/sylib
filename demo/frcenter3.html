@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	</head>
+	<body style="display:none;" >
+			
+			 <div class="wenziqf padzy30">
+                    <p>群发消息可以从素材库中选择已创建的素材，也通过新建图文消息临时创建素材进行群发；素材创建过程中可
+
+<span class="lvzi">直接选取共享素材</span>，这样可以节省自己创建素材的时间；共享素材以每周10个的速度由采编人员进行采编，各
+
+位运营人员也可以将自己推送的素材放进共享素材库供大家调用。</p>
+                </div>
+                
+                <div class="padzy30 margin_top15">
+                     <table  border="0" cellspacing="0" cellpadding="0" class="mytable" style="margin-left:0px;">
+                      <tr>
+                        <th style=""><p class=" pbd"><input name="" type="checkbox" value="">定时发送</p></th>
+                        <th style="padding-left:50px;">发送时间：</th>
+                        <td><input  class="input_bd"  placeholder="选择日期和时间"></td>
+                      </tr>
+                    </table>
+               </div>
+               
+               <div class="padzy30">
+                    <p class="tuisong">推送方式：</p>
+                    <ul class="fuli_ul">
+                        <li><label><input name="" type="checkbox" value="" />渭南小沃</label></li>
+                        <li><label><input name="" type="checkbox" value="" />咸阳联通</label></li>
+                        <li><label><input name="" type="checkbox" value="" />延安联通</label></li>
+                        <li><label><input name="" type="checkbox" value="" />铜川联通</label></li>
+                        <li><label><input name="" type="checkbox" value="" />宝鸡联通</label></li>
+                        <li><label><input name="" type="checkbox" value="" />汉中联通</label></li>
+                        <li><label><input name="" type="checkbox" value="" />汉中联通</label></li>
+                        <li><label><input name="" type="checkbox" value="" />榆林联通（订阅号）</label></li>
+                        <li><label><input name="" type="checkbox" value="" />榆林联通</label></li>
+                        <li><label><input name="" type="checkbox" value="" />陕西联通</label></li>
+                        <li><label><input name="" type="checkbox" value="" />安康联通生活馆</label></li>
+                        <li><label><input name="" type="checkbox" value="" />西安联通</label></li>
+                        <li><label><input name="" type="checkbox" value="" />沃在商洛</label></li>
+                    </ul>
+                    <div class="clear"></div>
+               </div>
+               
+               <div class="padzy30 margin_top15">
+                   <div class="tuwen_tit">图文消息</div>
+                   <div class="tuwen_con">
+                       <ul class="tuwen_ul">
+                           <li>
+                              <a href="#" style="cursor:pointer;">
+                              <i class="addxz_ico"></i>
+                              <p class="huizi add_zi">从素材库中选择</p>
+                              </a>
+                           </li>
+                           <li>
+                               <a href="#" style="cursor:pointer;">
+                              <i class="addxz_ico"></i>
+                              <p class="huizi add_zi">新建图文消息</p>
+                              </a>
+                           </li>
+                       </ul> 
+                       <div class="clear"></div>
+                   </div>
+                   
+                   <div class="caozuo margin_top30">
+                       <ul>
+                           <li><input name="" class="but_fs" type="button" value="发送"></li>
+                           <li>
+                               <div>
+                                   <p class="mass_send_tips huizi">你本月还能群发 <em id="leftNum" class="send_num">4</em> 条消息</p>
+                               </div>
+                           </li>
+                       </ul>
+                       <div class="clear"></div>
+                   </div>
+                   
+               </div>
+        
+        
+        
+        
+		
+		<script src="../sylib.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			
+			/*
+			seajs.use(['jquery/jquery', 'jquery/showLoading', 'syl/frcenter', 'syl/utils/utils'], 
+			function($, showLoading, frcenter, utils) {
+                $("body").hide().showLoading();
+				frcenter.init({
+                    path_data : utils.getCdnBasePath() + "lib/syl/frcenter/menus.json",
+                    callback : function() {
+                        $("body").hideLoading().show();
+                    } 
+                });
+			});
+			*/
+            
+            /*
+			seajs.use(['jquery/showLoading', 'syl/frcenter'], function(showLoading, frcenter) {
+                $("body").hide().showLoading();
+				frcenter.init({
+                    data : {
+                        menus : [{
+                            "name" : "节目单管理",
+                            "menus" : [{
+                                "name" : "直播节目",
+                                "linkurl" : "javascript:void(0);"
+                            },{
+                                "name" : "直播节目单",
+                                "linkurl" : "javascript:void(0);"
+                            }]
+                        }, {
+                            "name" : "个人设置",
+                            "menus" : [{
+                                "name" : "个人信息",
+                                "linkurl" : "http://www.baidu.com",
+                                "clientevent" : "menu_person_info",
+                                "class" : "psclass"
+                            }],
+                            "class" : "pclass"
+                        }],
+                        navbarmenu : [{
+                            "name" : "退出",
+                            "linkurl" : "#",
+                            "clientevent" : "menu_exist"
+                        }]
+                    },
+                    event : function(menus) {
+                        menus.on("menu_person_info", function() {
+                            return confirm("确定要继续吗？");
+                        }).on("menu_exist", function() {
+                            return confirm("确定要退出吗？");
+                        });
+                    },
+                    callback : function() {
+                        $("body").hideLoading().show();
+                    }
+                });
+			});
+            */
+			
+			seajs.use(['jquery/jquery', 'jquery/showLoading', 'syl/frcenter3', 'syl/utils/utils'], 
+			function($, showLoading, frcenter, utils) {
+                $("body").hide().showLoading();
+				frcenter.init({
+                    callback : function() {
+                        $("body").hideLoading().show();
+                    } 
+                });
+			});
+            
+		</script>
+        
+        <style>
+            .pclass .panel-heading {
+                font-size : 20px;
+            }
+            .psclass a {
+                color : red;
+            }
+        </style>
+		
+	</body>
+</html>

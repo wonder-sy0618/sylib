@@ -1,0 +1,60 @@
+{
+    "menus" : [{
+        "name" : "功能",
+        "menus" : [{
+            "name" : "群发功能",
+			"menus" : [{
+				"name" : "新建群发消息",
+				"linkurl" : "#"
+			}, {
+				"name" : "已发送",
+				"linkurl" : "#"
+			}]
+        }, {
+            "name" : "插播功能",
+			"menus" : [{
+				"name" : "插播功能",
+				"linkurl" : "#"
+			}]
+        }, {
+            "name" : "一键查询",
+			"menus" : [{
+				"name" : "一键查询",
+				"linkurl" : "#"
+			}]
+        }, {
+            "name" : "活动模板",
+			"menus" : [{
+				"name" : "活动列表",
+				"linkurl" : "#"
+			}]
+        }]
+    }, {
+        "name" : "管理",
+        "menus" : [{
+            "name" : "素材管理",
+			"menus" : [{
+				"name" : "图文消息",
+				"linkurl" : "demo/frcenter3.html"
+			}, {
+				"name" : "图片库",
+				"linkurl" : "#"
+			}]
+        }, {
+            "name" : "共享管理",
+			"menus" : [{
+				"name" : "图文消息",
+				"linkurl" : "#"
+			}]
+        }]
+    }],
+    "navbarmenu" : [{
+        "name" : "修改密码",
+		"icon" : "miyao.png",
+        "linkurl" : "#"
+    }, {
+        "name" : "退出",
+		"icon" : "guanji.png",
+        "linkurl" : "#"
+    }]
+}
