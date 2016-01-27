@@ -1020,9 +1020,11 @@ function clone(obj) {
 		  };
 	})();
 	
-	
 	// 获得当前页面的basepath
 	var getPageBasePath = function() {
+		if (window.sylib && window.sylib.pageBasePath) {
+			return window.sylib.pageBasePath;
+		}
 		var curWwwPath=window.document.location.href;
 		var pathName=window.document.location.pathname;
 		var pos=curWwwPath.indexOf(pathName);
@@ -1081,7 +1083,7 @@ seajs.config({
 		'jquery/easyui' : 	'jquery/easyui/jquery.easyui.min.js',
 		'jquery/cookie' : 	'jquery/cookie/jquery.cookie.js',
 		'jquery/form' : 	'jquery/form/jquery.form.js',
-		'jquery/validate' : 	'jquery/validate/jquery.validate.js', 
+		'jquery/validate' : 	'jquery/validate/jquery.validateloader.js', 
 		'jquery/metadata' : 	'jquery/metadata/jquery.metadata.js',
 		'jquery/inputbox' : 	'jquery/inputbox/jquery.inputbox.js',
 		'jquery/beautifySelector' : 	'jquery/inputbox/jquery.beautifySelector.js',
@@ -1111,8 +1113,10 @@ seajs.config({
 		'syl/frcenter2': 		'syl/frcenter2/frcenter.js',
 		'syl/frcenter3': 		'syl/frcenter3/frcenter.js',
 		'syl/frlogin': 		'syl/frlogin/frlogin.js',
+		'syl/frlogin2': 		'syl/frlogin2/frlogin.js',
 		'syl/fpageutil': 		'syl/fpageutil/fpageutil.js',
 		'syl/fileserver': 		'syl/fileserver/fileserver.js',
+		'syl/wpush': 		'syl/wpush/wpush.js',
 		'syl/audionotify': 		'syl/audionotify/audionotify.js',
 		'syl/fileserver/imgupload': 		'syl/fileserver/imgupload/imgupload.js',
 		'syl/wx/ui/preview': 		'syl/wx/ui/preview/preview.js',
